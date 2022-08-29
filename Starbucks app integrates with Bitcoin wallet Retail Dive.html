@@ -1,0 +1,1622 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" dir="ltr" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"XQECWFRACQQJV1VRBQ==",licenseKey:"9c8be68c12",applicationID:"1793432"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9c8be68c12","applicationID":"1793432","transactionName":"ZVJSZRFXWUVWABJbX1wYdkQNVUNfWA1JXlVVVlNIAkZHRRkVD1dHQQ1CVA1SUkRoDwNVUVFOb1wMVF5aUgAJX11XRVNUB1deWk48BV1eRlJeRQ==","queueTime":0,"applicationTime":149,"agent":""}</script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Starbucks app integrates with Bitcoin wallet | Retail Dive</title>
+<meta content="Retail industry news, voices and jobs.  Optimized for your mobile phone." name="description">
+<meta content="525934007612784" property="fb:pages"/>
+<script data-cfasync="false" src="https://cmp.osano.com/AzqdtLT8Mqkut2TZ/bdeb2f70-056f-4937-961a-e9db412e4c7a/osano.js"></script>
+<style>
+                .osano-cm-widget{display: none;}
+            </style>
+<script data-cfasync="false">
+                
+                window.Osano.cm.addEventListener("osano-cm-script-blocked", function (item) {
+                    console.log("Script blocked: " + item);
+                });
+                window.Osano.cm.addEventListener("osano-cm-cookie-blocked", function (item) {
+                    console.log("Cookie blocked: " + item);
+                });
+            </script>
+<script>
+                window.dive_location = "NonEU";
+                window.dive_limit_data_processing = false;
+                
+                
+            </script>
+<!-- ====== FAVICONS ======= -->
+<link href="/favicon.ico" rel="icon"/>
+<!-- regular favicons -->
+<link href="/static/images/favicons/favicon.ico?102717100918" rel="shortcut icon" type="image/png"/>
+<link href="/static/images/favicons/favicon-16.png?102717100918" rel="shortcut icon" sizes="16x16" type="image/png"/>
+<link href="/static/images/favicons/favicon-32.png?102717100918" rel="shortcut icon" sizes="32x32" type="image/png"/>
+<link href="/static/images/favicons/favicon-96.png?102717100918" rel="shortcut icon" sizes="96x96" type="image/png"/>
+<!-- apple touch favicon icons -->
+<link href="/static/images/favicons/apple-touch-icon-57.png?102717100918" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="/static/images/favicons/apple-touch-icon-60.png?102717100918" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="/static/images/favicons/apple-touch-icon-72.png?102717100918" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="/static/images/favicons/apple-touch-icon-76.png?102717100918" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="/static/images/favicons/apple-touch-icon-114.png?102717100918" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="/static/images/favicons/apple-touch-icon-144.png?102717100918" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="/static/images/favicons/apple-touch-icon-152.png?102717100918" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="/static/images/favicons/apple-touch-icon-180.png?102717100918" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+<!-- ms tile favicon icons -->
+<meta content="#ffffff" name="msapplication-TileColor"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="/static/images/favicons/ms-tile-144.png?102717100918" name="msapplication-TileImage"/>
+<link href="https://www.retaildive.com/feeds/news/" rel="alternate" title="Latest News Feed" type="application/rss+xml">
+<link href="https://www.retaildive.com/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency" rel="canonical">
+<meta content="YMFWaX0WUEtlJD0dtMeJj7W0pFYAApm5lyGbJt95MJU" name="google-site-verification">
+<link href="/static/css/dive_app.css?540416240822" rel="stylesheet"/>
+<script data-cfasync="false" src="//d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js"></script>
+<script data-cfasync="false">
+    var bugsnagUserId = '';
+    var bugsnagUserName = '';
+    window.bugsnagClient = Bugsnag.start({
+        apiKey: 'b78c0f8dcaa1b7ff5fb5bdf5f2a110db',
+        appVersion: 'fc63bf9038f8b62ac75c83a4e96cb01ebb05d843',
+        releaseStage: 'production',
+        enabledReleaseStages: [ 'qa', 'staging', 'production' ],
+        collectUserIp: false,
+    
+        onError: function (event) {
+          event.setUser(bugsnagUserId, '', bugsnagUserName)
+        }
+    });
+</script>
+<script>
+                // Initialize dataLayer empty array for GTM events
+                dataLayer = [];
+                dataLayer.push({
+                    'site': 'Retail Dive',
+                });
+            </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WCZ4CFR');</script>
+<!-- End Google Tag Manager -->
+<script src="/static/js/jquery_360.min.js?543516150322"></script>
+<script>
+    
+    // waitForTriggerHandler() is library for queuing up javascript to be stored and then executed when a trigger
+    // function is called. You can push() any number of functions which will be stored unless and until trigger()
+    // is called. Once trigger() is called any future functions that you push() in will be executed immediately.
+    // It is safe to call .trigger() multiple times. Any arguments passed to .trigger() will also be passed along
+    // to the associated function
+
+    function waitForTriggerHandler() {
+        var function_queue = [];
+        var trigger_arguments = [];
+        this._triggered = false;
+
+        this.push = function(fn) {
+            if (this._triggered) {
+                // just run it immediately if handler has already been triggered
+                fn.apply(null, trigger_arguments);
+            }
+            else {
+                // otherwise add to the queue to run later
+                function_queue.push(fn);
+            }
+        };
+
+        this.trigger = function() {
+            // any arguments passed to trigger(foo, bar, baz) will also be passed along to functions in the queue
+
+            // first convert any arguments to an array
+            trigger_arguments = Array.prototype.slice.call(arguments);
+            while (function_queue.length){
+                // for each function in the queue, pop it off and then execute it while passing in any
+                // args that may have been passed to trigger().
+                function_queue.pop().apply(null, trigger_arguments);
+                // The "null" above is for the value of "this".
+                // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Parameters
+            }
+            this._triggered = true;
+        }
+
+    }
+    
+    // set up waitToLoadAds handler
+    window.waitToLoadAds = new waitForTriggerHandler();
+    // We set up the triggers for this below, they depend on whether we're loading lytics on the page
+</script>
+<script type="text/javascript">
+        // This token is here for test_lytics_snippet.py test: lytics-is-enabled
+        
+        window.googletag = window.googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        // initialize callback (source: https://learn.lytics.com/product-docs/lytics-javascript-tag/receiving-data-from-lytics)
+        !function (l, a) { a.liosetup = a.liosetup || {}, a.liosetup.callback = a.liosetup.callback || [], a.liosetup.addEntityLoadedCallback = function (l, o) { if ("function" == typeof a.liosetup.callback) { var i = []; i.push(a.liosetup.callback), a.liosetup.callback = i } a.lio && a.lio.loaded ? l(a.lio.data) : o ? a.liosetup.callback.unshift(l) : a.liosetup.callback.push(l) } }(document, window);
+
+
+        // custom init + lytics default install tag from https://activate.getlytics.com/connect?aid=2751
+        // see https://learn.lytics.com/understanding/product-docs/lytics-javascript-tag/configuration#configuration-options
+        
+            var lyticsCid = '44fda7674f94228540d8fba6786f9770';
+            console.log('You are using the Lytics Prod account');
+        
+
+        var lytics_init_options = {
+            cid: lyticsCid,
+            url: "//c.lytics.io",
+            min: true,
+            loadid: true
+        };
+        window.jstag=function(){function t(t){return function(){return t.apply(this,arguments),this}}function n(){var n=["ready"].concat(c.call(arguments));return t(function(){n.push(c.call(arguments)),this._q.push(n)})}var i={_q:[],_c:{},ts:(new Date).getTime(),ver:"2.0.0"},c=Array.prototype.slice;return i.init=function(t){return i._c=t,t.synchronous||i.loadtagmgr(t),this},i.loadtagmgr=function(t){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=t.url+"/api/tag/"+t.cid+"/lio.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(n,i)},i.ready=n(),i.send=n("send"),i.mock=n("mock"),i.identify=n("identify"),i.pageView=n("pageView"),i.bind=t(function(t){i._q.push([t,c.call(arguments,1)])}),i.block=t(function(){i._c.blockload=!0}),i.unblock=t(function(){i._c.blockload=!1}),i}(),window.jstag.init(lytics_init_options);
+
+        
+        (function(){
+            var sailthru_cookie, sailthru_user_id;
+            function read_cookie(cookieName) {
+              var re = new RegExp('[; ]'+cookieName+'=([^\\s;]*)');
+              var sMatch = (' '+document.cookie).match(re);
+              if (cookieName && sMatch) return unescape(sMatch[1]);
+              return '';
+            }
+            sailthru_cookie = read_cookie('sailthru_hid');
+            if (sailthru_cookie.length > 56) {
+              sailthru_user_id = sailthru_cookie.slice(32,56);
+              jstag.send({ st_profile_id: sailthru_user_id });
+            }
+        })();
+
+        
+        
+        
+        
+        window.liosetup.addEntityLoadedCallback(waitToLoadAds.trigger);  // trigger ads when lytics loads
+        setTimeout(waitToLoadAds.trigger, 1000);  // also trigger lytics if it's taking too long
+
+        
+        
+        waitToLoadAds.push(function (lytics_data) {
+            // lytics_data won't be defined if lytics failed to load correctly. In that case
+            // we don't need to set any segments.
+            if (lytics_data && lytics_data.segments) {
+                googletag.cmd.push(function() {
+                    googletag.pubads().setTargeting("LyticsSegments", lytics_data.segments);
+                });
+            }
+        });
+
+    </script>
+<script src="/static/js/mailcheck.min.js?192616240919" type="text/javascript"></script>
+<script src="/static/js/dive_mailcheck.js?192616240919" type="text/javascript"></script>
+<script src="/static/js/app.js?400716170822"></script>
+<script type="text/javascript">
+                var divecounter_settings = {};
+                
+                    divecounter_settings.showSignupAd = true;
+                
+                
+            </script>
+<script src="/static/js/divecounter.js?510516220622" type="text/javascript"></script>
+<script type="text/javascript">
+        // Special unbounce signup thing for google traffic. Test with ?test_unbounce in the URL
+        // Note: divecounter must already be loaded. Only enabled on pages that would normally have signup ads
+        // Note: showSignupAd is always off if prestitial is enabled!
+        if ((typeof divecounter !== "undefined") && ($(window).width() > 640)) {
+          var test_unbounce = (window.location.href.indexOf("?test_unbounce")>=0);
+          var force_unbounce = (window.location.href.indexOf("signupbounce=1")>=0) ||
+                                (window.location.href.indexOf("utm_campaign=Linked-HR")>=0) ||
+                                (window.location.href.indexOf("utm_source=outbrain")>=0);
+          if (test_unbounce ||
+            force_unbounce ||
+            (document.referrer.match(/^https?:\/\/(www\.google\.|news\.google\.|t\.co|twitter\.com|www\.facebook\.com)/i) &&
+              divecounter.getOption('showSignupAd') && divecounter.canShow(1,1)) ) {
+            // dyanmically load ouibounce.js only on pages where its needed
+            $.getScript("/static/js/ouibounce.min.js?102717100918", function(){
+                // Once ouibounce.js loads, call the script
+                // We're reusing divecounter's modal instead of OuiBounce's modal code (that's why we pass it 'false')
+                var _ouibounce = ouibounce(false, {
+                  aggressive: test_unbounce, // ignore cookie in test mode
+                  cookieName: '_viewedOuiBounce', // underscored cookies should be ignored by Varnish
+                  callback: function() {
+                    divecounter_open_ad();
+                  }
+                });
+            });
+          } // end should show unbounce
+        } // end divecounter defined
+        </script>
+<script type="text/javascript">
+            // Load analytics.js (universal analytics) first
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            // set all the variables that are per-session or per-visit
+            ga(
+                'create',
+                'UA-19684343-12',
+                'auto',
+                {'name': 'orig'},
+                {'siteSpeedSampleRate': 2}
+            );
+
+            
+            
+                ga('orig.require', 'GTM-5BS8HL8');
+            
+
+            // Set the same variables for aggregate data profile
+            ga(
+                'create',
+                'UA-19684343-45',
+                'auto',
+                {'name': 'agg'},
+                {'siteSpeedSampleRate': 2}
+            );
+
+            //GA.js for tracking outbound links
+            function trackOutboundLink(link, category, action, redirect) {
+                try{
+                    ga('orig.send', 'event', category, action);
+                } catch(err) {}
+
+                try{
+                    ga('agg.send', 'event', category, action);
+                } catch(err) {}
+
+                //Timer to prevent redirect before processing data - not necessary if opening tab in new window
+                if(redirect){
+                    setTimeout(function(){
+                        document.location.href = link.href;
+                        }, 100);
+                }
+            }
+            $(document).ready(function() {
+              $(".outboundlink").click(function() {
+                trackOutboundLink(this, 'outboundlink', this.link, this.target != '_blank');
+              });
+            });
+            
+                
+                    ga("orig.set", {
+                        "dimension3": "",
+                        "dimension4": "",
+                        "dimension5": "",
+                        "dimension6": "",
+                        "dimension7": "",
+                        "dimension8": "",
+                        
+                        
+                        
+                        "dimension11": "",
+                        
+                    });
+                
+                
+                    ga("agg.set", {
+                        "dimension3": "",
+                        "dimension7": "",
+                        "dimension5": "",
+                        "dimension6": "",
+                        "dimension4": "",
+                        "dimension8": "",
+                        
+                        
+                        
+                        "dimension11": "",
+                        
+                    });
+                
+            
+
+            
+
+            
+            
+                var diveSendPageviewEvent = true;
+            
+
+            
+            if (diveSendPageviewEvent === true) {
+                ga('orig.send', 'pageview');
+                ga('agg.send', 'pageview');
+                console.log('Queued sending of the pageview event to Google Analytics.');
+            }
+            else {
+                console.log('Sending the Google Analytics pageview event is disabled for this page.');
+            }
+
+
+            // Actually track outbound links
+            // Not sure if this is being used?
+            var trackOutboundRegisterLink = function (url) {
+               ga('agg.send', 'event', 'event_register', url, 'Registered for event', {'hitCallback':
+                 function () {
+                     document.location = url;
+                 }
+               });
+            };
+            // Not sure if this is being used?
+            var trackOutboundWebsiteLink = function (url) {
+               // No need to manually change document.location; website opens in new tab
+               ga('agg.send', 'event', 'event_website', url, 'Visited event site');
+            };
+
+        </script>
+<script src="/static/js/dist/googleAnalyticsHelper.bundle.js?440516240822" type="module"></script>
+<script type="text/javascript">
+            jQuery.browser = {};
+            (function () {
+                jQuery.browser.msie = false;
+                jQuery.browser.version = 0;
+                if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                    jQuery.browser.msie = true;
+                    jQuery.browser.version = RegExp.$1;
+                }
+            })();
+        </script>
+<!-- for modal signup form -->
+<script src="/static/js/jquery.simplemodal.divefork.min.js?121216270722" type="text/javascript"></script>
+<style>
+
+            /* dynamic style overrides based on DB go here*/
+            
+        </style>
+<script>
+    function obfuscate(username, domain, unknown1, unknown2) {
+        // Stub function to deal with obfuscated email addresses; see TECH-1832
+        // document.currentScript returns javascript DOM object of script tag that is being processed
+        var $emTag = $(document.currentScript).prev();
+        $emTag.append(username + "@" + domain);
+    }
+    </script>
+<script src="/static/js/prestitial.js?510516220622" type="text/javascript"></script>
+<script async="" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script src="/static/js/dist/signupDataGam.bundle.js?440516240822"></script>
+<script src="/static/js/dist/adTemplates.bundle.js?440516240822" type="text/javascript"></script>
+<script>
+    
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+    
+    eventer(messageEvent, function (e) {
+        var key = e.message ? "message" : "data";
+        var data = e[key];
+        var eventName = data.message || 'ignore';
+
+        if (eventName == 'adContentAvailable') {
+            var $ad_element;
+            
+                $ad_element = $('div').filter('[data-container-ad-unit-id="' + data.adUnit + '-' + window.dfp_visibility + '"]');
+            
+
+            let content;
+            // new divesite-based ad code
+            if (data.version && data.version === 2) {
+                if (data.adType in window.adTemplates) {
+                    const template = window.adTemplates[data.adType];
+                    content = window.Mustache.render(template, data.content);
+                } else {
+                    // don't break if we have a malformed ad type
+                    content = '';
+                }
+            } else {
+                // old ad code where templates come from GAM
+                content = data.content;
+            }
+
+            // Replace the content with what we got from the ad
+            $ad_element.html(content);
+            // Hide the DFP div that contains the iframe because the iframe takes up space.
+            $ad_element.siblings().hide();
+
+            
+            var nativeAdEditorialSelector = '.sidebar .hybrid-ad-wrapper .native-ad-editorial';
+            var nativeAdEditorialExists = $(nativeAdEditorialSelector).length > 0;
+            if ( nativeAdEditorialExists ) {
+                $(nativeAdEditorialSelector).closest('.hybrid-ad-wrapper').addClass('native-ad-editorial-sidebar-border');
+            }
+            
+                
+                // Inline homepage ad
+                $('.feed-item-ad .hybrid-ad-wrapper a').each(function (index, element) {
+                    window.updateGamAdUrl(element, 'inline');
+                });
+                // Editorial native ad sidebar
+                // NOTE: must go before inline native ad to ensure correct location added
+                $('.sidebar .native-ad.editorial a').each(function (index, element) {
+                    window.updateGamAdUrl(element, 'sidebar');
+                });
+                // Editorial native ad inline
+                $('.native-ad.editorial a').each(function (index, element) {
+                    window.updateGamAdUrl(element, 'inline');
+                });
+                // Sidebar ad
+                $('.sidebar .hybrid-ad-wrapper a').each(function (index, element) {
+                    window.updateGamAdUrl(element, 'sidebar');
+                });
+            
+        }
+    }, false);
+
+    
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+    googletag.cmd.push(function () {
+        var desktopWidth = 1024;
+        
+        if (window.innerWidth >= desktopWidth) {
+            window.dfp_visibility = 'desktop';
+        }
+        else {
+            window.dfp_visibility = 'mobile';
+        }
+
+        var dfpDisplayConfiguration = {
+            "prestitialEnabled": true,
+            "leaderboardEnabled": true,
+            "sidebarAdsEnabled": true,
+            "visibility": window.dfp_visibility
+        };
+
+        if (window.dfp_visibility == 'desktop') {
+            
+            if (typeof prestitialAds == 'object' && prestitialAds.pageIsPrestitialEligible()) {
+                googletag.defineSlot('/21662595662/retaildive/retaildiveprestitial', [[500, 300], [640, 480]], 'paychekgoeshere').addService(googletag.pubads());
+            }
+            if (dfpDisplayConfiguration.leaderboardEnabled) {
+                googletag.defineSlot('/21662595662/retaildive/retaildiveleaderboard', [[970, 180], [728, 90], [970, 90]], 'dfp-leaderboard-desktop').addService(googletag.pubads());
+                googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                    
+                    if ((event.slot.getAdUnitPath() === '/21662595662/retaildive/retaildiveleaderboard' ||
+                        event.slot.getAdUnitPath() === '/21662595662/retaildive/retaildiveleaderboard') && !event.isEmpty ) {
+                        $(window).blur(function () {
+                            if (document.activeElement === $('#dfp-leaderboard-desktop iframe')[0] ||
+                                document.activeElement === $('#dfp-leaderboard-desktop iframe')[0]) {
+                                try {
+                                    localStorage.setItem('leaderboard_signup_path', document.location.pathname);
+                                } catch (e) {
+                                    // local storage could not be available due to privacy settings or something
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            if (dfpDisplayConfiguration.sidebarAdsEnabled) {
+                googletag.defineSlot('/21662595662/retaildive/retaildivehybrid1', [[300, 250], 'fluid', [160, 600]], 'dfp-hybrid1-desktop').addService(googletag.pubads());
+            }
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid2', [[300, 250], 'fluid'], 'dfp-hybrid2-desktop').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid3', [[300, 250], 'fluid'], 'dfp-hybrid3-desktop').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid4', [[300, 250], 'fluid'], 'dfp-hybrid4-desktop').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivethankyouhybrid1', ['fluid'], 'dfp-thankyouhybrid1-desktop').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivethankyouhybrid2', ['fluid'], 'dfp-thankyouhybrid2-desktop').addService(googletag.pubads());
+        }
+        else {
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid1', [[300, 250], 'fluid'], 'dfp-hybrid1-mobile').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid2', [[300, 250], 'fluid'], 'dfp-hybrid2-mobile').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid3', [[300, 250], 'fluid'], 'dfp-hybrid3-mobile').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivehybrid4', [[300, 250], 'fluid'], 'dfp-hybrid4-mobile').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivethankyouhybrid1', ['fluid'], 'dfp-thankyouhybrid1-mobile').addService(googletag.pubads());
+            googletag.defineSlot('/21662595662/retaildive/retaildivethankyouhybrid2', ['fluid'], 'dfp-thankyouhybrid2-mobile').addService(googletag.pubads());
+        }
+
+        
+
+        
+        
+        
+
+        if ((typeof divecounter !== "undefined") && (divecounter.getData().is_subscriber)) {
+            googletag.pubads().setTargeting("is_subscriber", "yes");
+        }
+        var site = window.location.host;
+        googletag.pubads().setTargeting("site", site);
+        var first_path = window.location.pathname.split( '/' )[1];
+        googletag.pubads().setTargeting("first_path", first_path);
+        
+        
+            googletag.pubads().setTargeting("newspost_type", "");
+            googletag.pubads().setTargeting("articleID", "427");
+            googletag.pubads().setTargeting("slug", "");
+            googletag.pubads().setTargeting("is_sponsored", "false" );
+        
+
+        // Make sure we check that we have the things present in localStorage that we want to check before we add targeting on them.
+        // This is what sets targeting on trendline native ad units to make sure we only get ads associated with the
+        // content gate that a user filled out if they visited the page previously.
+        
+        
+        var isTopicPage = window.location.pathname.indexOf('/topic/') !== -1;
+        if(isTopicPage) {
+            googletag.pubads().setTargeting('is_topics_page', 'true');
+        }
+
+        googletag.pubads().setCentering(true);
+        googletag.pubads().collapseEmptyDivs(false); // Whether to collapse the slots even before the ads are fetched.
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+</script>
+</meta></link></link></meta></head>
+<body class="">
+<!-- Accessibility skip-nav link -->
+<a class="button button--loud skip-nav-link" href="#skip-link-target" tabindex="1">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WCZ4CFR" style="display:none;visibility:hidden" width="0">
+</iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="prestitial-init" id="prestitial-init" style="display: none;"></div>
+<div class="prestitial content-overlay" id="prestitial-outer" style="display:none;">
+<section aria-label="Site menu" class="site-menu">
+<div class="site-menu-inner">
+<img class="pub-logo" src="https://d12v9rtnomnebu.cloudfront.net/logo/publications/retail_black.svg"/>
+</div>
+</section>
+<section class="paychek-page-wrapper row">
+<div class="paychek-button large-4 large-push-8 columns">
+<div>
+                        CONTINUE TO SITE ➞
+                    </div>
+</div>
+<div class="paychek large-8 large-pull-4 columns">
+<div id="paychekgoeshere"></div>
+<script type="text/javascript">
+                        
+                        if (typeof prestitialAds !== 'undefined' && prestitialAds.pageIsPrestitialEligible()) {
+
+                          
+                          prestitialAds.setPrestitialPossibleCookie();
+                          var prestitial_ad_is_loaded = false;
+                          var prestitial_ad_is_empty = false;
+
+                          googletag.cmd.push(function () {
+                            googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                              
+                              if (event.slot.getAdUnitPath() == '/21662595662/retaildive/retaildiveprestitial') {
+                                if (event.isEmpty || prestitialAds.testingNoAd()) {
+                                  prestitial_ad_is_empty = true;
+                                }
+                                else {
+                                  
+                                  prestitialAds.initialize(7);
+                                  prestitial_ad_is_loaded = true;
+                                  $.modal.close();
+                                  $('div#prestitial-init').hide(); // hide the all white overlay
+                                  prestitialAds.setCookie(
+                                    "_prestitialViewed",
+                                    (new Date()).getTime(),
+                                    prestitialAds.daysBetweenPrestitial
+                                  );
+                                }
+                              }
+                            });
+                          });
+
+                          
+                          if (prestitialAds.testingNoAd()) {
+                            
+                          } else {
+                            
+                            
+                            
+                            waitToLoadAds.push(function() {
+                              
+                              googletag.cmd.push(function () {
+                                
+                                googletag.display('paychekgoeshere');
+                              });
+                            });
+                          }
+
+                          
+                          setTimeout(
+                            function () {
+                              if (!prestitial_ad_is_loaded && !prestitialAds.overrideTimeout()) {
+                                
+                                if (!prestitial_ad_is_empty) {
+                                  
+                                  // if the prestitial is already hidden, then don't hide it again.
+                                  if (!prestitialAds.prestitialAdIsClosed()) {
+                                    prestitialAds.closePrestitial();
+                                    prestitialAds.logClosePrestitialAdBy('failed');
+                                  }
+                                }
+                              } else if (!prestitialAds.overrideTimeout()) {
+                                
+                                setTimeout(
+                                  function () {
+                                    // if the prestitial is already hidden, then don't hide it again.
+                                    if (!prestitialAds.prestitialAdIsClosed()) {
+                                      prestitialAds.closePrestitial();
+                                      prestitialAds.logClosePrestitialAdBy('timeout');
+                                    }
+                                  },
+                                  prestitialAds.timeoutSeconds()
+                                );
+                              } else {
+                                
+                              }
+
+                            },
+                            
+                            2900
+                          );
+                        }
+                    </script>
+</div>
+</section>
+</div>
+<!-- leaderboard -->
+<div class="hide-small show-large">
+<div data-container-ad-unit-id="/21662595662/retaildive/retaildiveleaderboard-desktop"></div>
+<div id="dfp-leaderboard-desktop" style="min-height: 90px">
+<script>
+        waitToLoadAds.push(function() {
+            googletag.cmd.push(function() {
+                if (window.dfp_visibility == 'desktop') { googletag.display('dfp-leaderboard-desktop'); }
+            })
+        });
+    </script>
+</div>
+</div>
+<div class="page-container">
+<header role="banner">
+<nav aria-label="Site menu" class="site-menu" id="top">
+<div class="site-menu-inner">
+<!-- logo -->
+<div class="pub-logo-wrapper">
+<a class="analytics t-dash-navigation" href="/">
+<img alt="Retail Dive" class="pub-logo" height="28" src="https://d12v9rtnomnebu.cloudfront.net/logo/publications/retail_black.svg"/>
+</a>
+</div>
+<!-- desktop menu, not visible on mobile/tablet -->
+<div class="menu-content-wrapper">
+<ul class="desktop-menu-main">
+<li>
+<a class="analytics t-deepdive-navigation" href="/deep-dive/">Deep Dive</a>
+</li>
+<li>
+<a class="analytics t-opinion-navigation" href="/opinion/">Opinion</a>
+</li>
+<li>
+<a class="analytics t-podcasts-navigation" href="/topic/podcasts/">
+                                Podcasts
+                            </a>
+</li>
+<li>
+<a class="analytics t-library-navigation" href="/library/">Library</a>
+</li>
+<li>
+<a class="analytics t-events-navigation" href="/events/">Events</a>
+</li>
+<li class="topics top-nav-dropdown-item">
+<a>
+                            Topics
+                            <span class="dropdown-toggle-arrow"></span>
+</a>
+</li>
+</ul>
+<!-- mobile menu toggle icon, not visible on desktop -->
+<button class="mobile-menu-toggle">
+                    Menu
+                    <img alt="menu" loading="lazy" src="/static/img/menu_icons/menu.svg?273117231121"/>
+</button>
+<!-- newsletter and search, only shown on desktop -->
+<ul class="desktop-menu-sub list-no-bullets">
+<li>
+<a class="search-toggle analytics t-search-navigation-top" href="javascript:void(0)">
+<img alt="search" height="16" loading="lazy" src="/static/img/menu_icons/search.svg?320116291121" width="16"/>
+<span class="sub-link">Search</span>
+</a>
+</li>
+<li>
+<a class="analytics t-signup-navigation" href="/signup/?signup_location=header&amp;signup_path=/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency">
+<button class="button button--loud">
+<img height="11" loading="lazy" opacity="none" src="/static/img/email_icons/mail.svg?273117231121" width="16"/>
+                            
+                                Sign up
+                            
+                            </button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="menu-search js-search-hide">
+<div class="menu-search-inner-wrapper row">
+<form action="/search/" data-ajax="false" method="GET">
+<label for="search-desktop">
+<span class="screen-reader-text search">Search</span>
+</label>
+<input data-role="none" id="search-desktop" name="q" placeholder="Search" type="search"/>
+<button class="analytics t-search-navigation-drawer" data-role="none" type="submit" value="">
+<img alt="search" height="16" loading="lazy" src="/static/img/menu_icons/search.svg?320116291121" width="16"/>
+</button>
+<img class="close" height="16" loading="lazy" src="/static/img/menu_icons/close.svg?273117231121" width="16"/>
+</form>
+</div>
+</div>
+<nav aria-label="Menu bar" class="topics menu-bar">
+<ul class="list-no-bullets">
+<li>
+<a class="analytics t-topic-navigation-technology" href="/topic/technology/">Technology</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-marketing" href="/topic/marketing/">Marketing</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-dtc" href="/topic/dtc/">DTC</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-operations" href="/topic/operations/">Operations</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-distressed-retail" href="/topic/distressed-retail/">Distressed Retail</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-store-concepts" href="/topic/store-concepts/">Store Concepts</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-consumer-trends" href="/topic/consumer-trends/">Trends</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-financial-news" href="/topic/financial-news/">Financial News</a>
+</li>
+</ul>
+</nav>
+<div class="search-overlay"></div>
+<div class="page-wrapper">
+<div class="page-inner-wrapper" id="skip-link-target">
+<div class="row">
+<div class="medium-10 medium-centered large-12">
+<section class="main-content large-8 columns" id="main-content">
+<div class="message message--info">
+        ARCHIVES: This is legacy content from before Industry Dive acquired Mobile Commerce Daily in early 2017. Some information, such as publication dates, may not have migrated over. Check out our <a href="https://www.retaildive.com/topic/mobile-commerce/" style="text-decoration: underline;">topic page</a> for the latest mobile commerce news.
+    </div>
+<article>
+<div class="article-header">
+<div class="article-title-wrapper">
+<h1 class="display-heading-04">
+                    Starbucks app integrates with Bitcoin wallet
+                </h1>
+</div>
+</div>
+<div class="row">
+<div class="large-2 columns">
+<div class="article-byline">
+<h4 class="hide-small show-large">Author</h4>
+<span>Rakin Azfar</span>
+</div>
+</div>
+<div class="large-10 columns article-wrapper">
+<div>
+<!--<div class="wp-caption alignleft" id="attachment_115689" style="width: 195px"><a href="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-23-at-11.19.26-AM.png"><img alt="Starbucks is partnering with iPayYou, a Bitcoin wallet service" class="size-full wp-image-115689" height="185" sizes="(max-width: 185px) 100vw, 185px" src="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-23-at-11.19.26-AM.png" srcset="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-23-at-11.19.26-AM.png 185w, http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-23-at-11.19.26-AM-150x150.png 150w" width="185"/></a><p class="wp-caption-text">Starbucks is partnering with iPayYou, a Bitcoin wallet service</p></div>--> <p>In a move that could possibly pave the way for widespread legitimization of the cryptocurrency, Starbucks is partnering with iPayYou to provide users of the Starbucks application an easy way to pay with Bitcoin.</p> <p>Customers using the Starbucks app can now pay through iPayYou’s Bitcoin wallet to pay for an assortment of items on its menu. iPayYou works through automated conversion processes to convert the oft-volatile cryptocurrency into USD in real time, through a tool called Bitcoin Direct to Starbucks.</p> <p>“There world is changing, we are all becoming increasingly connected, and even though 92 percent of transactions still happen in a physcial retail space vs. online, when it comes to managing the transaction the lion share of value exchange shortly will be transacted digitally rather than physically with cash,” said Michael Becker, managing partner at <a href="http://www.mcordis.com/">mCordis</a> and <a href="http://www.theconnectedmarketer.com/">The Connected Marketer Institute</a>. “In fact, I believe we should recognize and accept that we’re digital beings living in a physical world, that our digital selves have more economic value than or physical selves for all intensive purposes.</p> <p>“As for the future of Bitcoin, it is unclear if it or some other medium of digital exchange will win out, but what is clear is that physical cash will be some day, in our life time, go away,” he said. “Cash is a dinosaur.</p> <p>It is expensive to produce, distribute and manage, and like so many elements of our current society, it will eventually go away. In fact, most consumer transactions are digital, in the U.S. cash today only accounts for 40 percent consumer transaction activity, in other developing countries it is even less.”</p> <p><strong>iPayYou<br/>
+</strong>To use the service, users must first commission an amount of Bitcoin to transfer. The wallet then transfers that amount of bitcoin into the user’s Starbucks app leveraging real-time conversion rates.</p> <p>While numbers surrounding Bitcoin usage tend towards being more dubious than other, more sanctioned currencies, the partnership definitely makes sense from iPayYou’s end: over one million Starbucks customers use Mobile Order and Pay a month. Whether users of Bitcoin (or any like cryptocurrency) will be willing to use it for such quotidian purchases as their daily coffee is still up in the air.</p> <!--<p><a href="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.23-AM.png"><img alt="screen-shot-2016-12-27-at-12-08-23-am" class="alignnone size-full wp-image-115723" height="272" sizes="(max-width: 420px) 100vw, 420px" src="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.23-AM.png" srcset="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.23-AM.png 420w, http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.23-AM-300x194.png 300w" width="420"/></a></p>--> <p>“Bitcoin—and its parent tech, blockchain—are both valuable tools, and in and of themselves they are neutral entities; they can be used for good or for bad,” Mr. Becker said. “I prefer to recognize and applaud the former, and encourage us all to collaborate and find ways to diminish the later.</p> <p>“In the case of Bitcoin, there are many great applications, like Starbuck’s implementation with iPayYou.”</p> <p><strong>Bitcoin integration<br/>
+</strong>The integration comes on the heels of iPayYou’s foray into gift cards, which allows holders of bitcoin to purchase gift cards from an array of major retailers and chains, including Starbucks. Time will tell if bitcoin’s marred history will catch up to it to preclude the efforts of well meaning—and perhaps prescient—platforms such as iPayYou to introduce it into the mainstream of ecommerce.</p> <!--<p><a href="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.33-AM.png"><img alt="screen-shot-2016-12-27-at-12-08-33-am" class="alignnone size-full wp-image-115724" height="276" sizes="(max-width: 420px) 100vw, 420px" src="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.33-AM.png" srcset="http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.33-AM.png 420w, http://www.mobilecommercedaily.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-27-at-12.08.33-AM-300x197.png 300w" width="420"/></a></p>--> <p>And it is not only partnerships with companies such as iPayYou that is driving Starbucks’ excursion into mobile innovation. It recently announced an AI solution for mobile customers which will act as a barista within customers’ mobile devices (<a href="/ex/mobilecommercedaily/starbucks-ai-barista-further-reduces-human-interaction-shifts-mobile-ordering">see story</a>).</p> <p>The coffee chain is also expanding its mobile commerce platform to include integration with the massively popular WeChat mobile application in a partnership with Tencent, making a stronger push into the lucrative Chinese mobile market (<a href="/ex/mobilecommercedaily/starbucks-expands-abroad-brings-mobile-gifting-to-wechat">see story</a>).</p> <p>“In the short term, there will be little impact of-of this integration to Starbuck’s business or consumer behavior,” Mr. Becker said. “They—all of us—are still in a trial and error mode when it comes to innovations like this.</p> <p>“In the long-term, these technologies will evolve, they’ll traverse the Gartner Technology Hype Curve stages, and will eventually crawl out the primordial trough of disillusionment that every technology falls in to following their initial hype and they’ll eventually find their place as a productive tool for society.”</p> <br class="clear"/> <br/> <br/> <br/> <br/> <br class="clear"/> <br/> <br class="clear"/> <br/>
+</div>
+<div class="post-article-wrapper">
+<div class="share-buttons">
+<ul class="social-button-list">
+<li>
+<a class="social-button analytics t-article-end-social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//www.retaildive.com/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency&amp;title=Starbucks%20app%20integrates%20with%20Bitcoin%20wallet">
+<svg class="social-button__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 15.1969V21H19.5714V15.5851C19.5714 14.2248 19.0742 13.2973 17.8347 13.2973C16.8866 13.2973 16.3235 13.9225 16.0742 14.5353C15.9832 14.7517 15.9608 15.0526 15.9608 15.3556V21H12.5294C12.5294 21 12.5763 11.8285 12.5294 10.8805H15.9608V12.3142C15.9538 12.3259 15.9447 12.3369 15.9377 12.3486H15.9601L15.9608 12.3142C16.416 11.6259 17.229 10.6414 19.0511 10.6414C21.3074 10.6414 23 12.0875 23 15.1969ZM8.94118 6C7.76751 6 7 6.75089 7 7.74498C7 8.72053 7.7465 9.4886 8.90266 9.49409H8.92507C10.1225 9.49409 10.8648 8.71641 10.8648 7.74498C10.8375 6.75089 10.112 6 8.93838 6H8.94118ZM7.20448 21H10.6331V10.8805H7.20378L7.20448 21Z" fill="#323239"></path>
+</svg>
+<span class="social-button__text">post</span>
+</a>
+</li>
+<li>
+<a class="social-button analytics t-article-end-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.retaildive.com/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency">
+<svg class="social-button__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.2 6.5H8.3C7.857 6.5 7 7.3575 7 7.8V19.7C7 20.142 7.8575 21 8.3 21H14.4965V15.494H12.4985V13.504H14.497V11.973C14.497 10.1 15.9145 8.988 17.5855 8.988C18.3855 8.988 18.8075 9.0745 19.008 9.101V10.997H17.59C16.6815 10.997 16.512 11.447 16.512 12.081V13.5045H19.0345L18.7045 15.4935H16.5115V21H20.2C20.642 21 21.5 20.142 21.5 19.7V7.8C21.5 7.3575 20.642 6.5 20.2 6.5Z" fill="#323239"></path>
+</svg>
+<span class="social-button__text">share</span>
+</a>
+</li>
+<li>
+<a class="social-button analytics t-article-end-social-twitter" href="https://twitter.com/intent/tweet?text=Starbucks%20app%20integrates%20with%20Bitcoin%20wallet%20https%3A//www.retaildive.com/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency%20via%20@RetailDive">
+<svg class="social-button__icon" fill="none" height="30" viewbox="0 0 29 30" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.2578 10.1038C22.5648 15.9714 18.0738 20.9776 12.2241 21.2863C10.0307 21.4012 7.85581 20.8298 6 19.6509C7.89814 19.7778 9.7759 19.1942 11.2736 18.0156C10.5601 17.9304 9.88516 17.6441 9.32697 17.1901C8.76877 16.736 8.35011 16.1326 8.11942 15.4497C8.68282 15.5414 9.25746 15.504 9.80541 15.3412C8.95867 15.1816 8.19099 14.7384 7.62795 14.084C7.06492 13.4297 6.73988 12.603 6.70601 11.7392C7.18978 11.9335 7.7081 12.0264 8.22901 12.012C7.50378 11.4492 7.00543 10.6426 6.82564 9.7406C6.64584 8.83855 6.79669 7.90169 7.25044 7.10235C8.18342 8.25873 9.34779 9.20585 10.6683 9.88252C11.9889 10.5592 13.4362 10.9504 14.9168 11.0307C14.7762 10.5719 14.7271 10.0897 14.7722 9.61183C14.8174 9.13392 14.956 8.66962 15.18 8.24545C15.404 7.82129 15.7091 7.44555 16.0778 7.13972C16.4466 6.83388 16.8718 6.60393 17.3291 6.46301C18.0223 6.24844 18.7636 6.24668 19.4578 6.45794C20.1521 6.66921 20.7675 7.08385 21.2251 7.64865C22.0586 7.49815 22.8539 7.18256 23.5645 6.72029C23.2935 7.60574 22.6885 8.34991 21.8785 8.7941C22.615 8.71959 23.3329 8.51683 24 8.19494C23.6789 9.02858 23.0569 9.71049 22.2578 10.1052V10.1038Z" fill="#323239"></path>
+</svg>
+<span class="social-button__text">tweet</span>
+</a>
+</li>
+<li>
+<a class="social-button js-social-button-print" href="javascript:window.print()">
+<svg class="social-button__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.6944 10.8286H9.41667C8.07944 10.8286 7 11.908 7 13.2452V18.0786H10.2222V21.3008H19.8889V18.0786H23.1111V13.2452C23.1111 11.908 22.0317 10.8286 20.6944 10.8286ZM18.2778 19.6897H11.8333V15.6619H18.2778V19.6897ZM20.6944 14.0508C20.2514 14.0508 19.8889 13.6883 19.8889 13.2452C19.8889 12.8022 20.2514 12.4397 20.6944 12.4397C21.1375 12.4397 21.5 12.8022 21.5 13.2452C21.5 13.6883 21.1375 14.0508 20.6944 14.0508ZM19.8889 6.80078H10.2222V10.023H19.8889V6.80078Z" fill="#323239"></path>
+</svg>
+<span class="social-button__text">print</span>
+</a>
+</li>
+<li>
+<a class="social-button analytics t-article-end-social-email" href="/cdn-cgi/l/email-protection#4e711d3b2c242b2d3a731d3a2f3c2c3b2d253d6b7c7e2f3e3e6b7c7e27203a2b293c2f3a2b3d6b7c7e39273a266b7c7e0c273a2d2127206b7c7e392f22222b3a682f233e750c212a3773263a3a3e3d6b7d0f6161393939603c2b3a2f27222a27382b602d2123612b366123212c27222b2d2123232b3c2d2b2a2f272237613d3a2f3c2c3b2d253d6327203a2b293c2f3a2b3d6339273a26632c273a2d21272063392f22222b3a633a21632f22222139632f3e3e633b3d2b3c3d633a21633e2f376339273a26632d3c373e3a212d3b3c3c2b202d37">
+<svg class="social-button__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.4 8H8.6C7.72 8 7.008 8.675 7.008 9.5L7 18.5C7 19.325 7.72 20 8.6 20H21.4C22.28 20 23 19.325 23 18.5V9.5C23 8.675 22.28 8 21.4 8ZM21.4 11L15 14.75L8.6 11V9.5L15 13.25L21.4 9.5V11Z" fill="#323239"></path>
+</svg>
+<span class="social-button__text">email</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<aside class="sidebar large-4 columns">
+<div class="hybrid-ad-wrapper hide-small show-large">
+<div class="hybrid-ad-inner-wrapper">
+<div class="hide-small show-large">
+<div data-container-ad-unit-id="/21662595662/retaildive/retaildivehybrid1-desktop"></div>
+<div id="dfp-hybrid1-desktop">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                    waitToLoadAds.push(function() {
+                        googletag.cmd.push(function() {
+                            if (window.dfp_visibility == 'desktop' ) {
+                                
+                                    googletag.display('dfp-hybrid1-desktop');
+                                
+                                googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                                    
+                                        var adUnitPath = '/21662595662/retaildive/retaildivehybrid1';
+                                    
+                                    var onProformative = false;
+                                    if (onProformative && event.slot.getAdUnitPath() === adUnitPath && !event.isEmpty ) {
+                                        var adUnitPathWithVisibility = adUnitPath + '-desktop';
+                                        var selector = '.pf-comments__ad-wrapper [data-container-ad-unit-id="' + adUnitPathWithVisibility + '"]';
+                                        if (!$(selector).closest('.pf-comments__ad-wrapper').hasClass('borders')) {
+                                            $(selector).closest('.pf-comments__ad-wrapper').addClass('borders')
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    });
+                </script>
+</div>
+</div>
+</div>
+</div>
+<div class="signup sidebar-signup-box hide-small show-large" data-box-priority="0">
+<h3 class="sidebar-signup-box__header">Get the free newsletter</h3>
+<p class="sidebar-signup-box__description">Subscribe to Retail Dive for top news, trends &amp; analysis</p>
+<form action="/signup/" class="form js-form-email-validate" method="POST" name="signup">
+<label class="email-input js-email-input" for="id_5f159d_email">
+<span class="screen-reader-text">Email:</span>
+<input class="email" id="id_5f159d_email" name="email" placeholder="Work email address" required="" type="email"/>
+</label>
+<input name="signup_box_location" type="hidden" value="sidebar"/>
+<input name="signup_initial_url_path" type="hidden" value="/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency"/>
+<input id="id_5f159d_js_enabled" name="js_enabled" type="hidden" value="0"/>
+<ul class="signup-list list-no-bullets">
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-sidebar-checkbox-8" name="site_newsletters" type="checkbox" value="8">
+<label for="newsletter-sidebar-checkbox-8">
+<span class="newsletter-title">Daily Dive</span>
+<p class="newsletter-description">Topics covered: retail tech, e-commerce, in-store operations, marketing, and more.</p>
+<span class="secondary-label">M-F</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-sidebar-checkbox-27" name="site_newsletters" type="checkbox" value="27">
+<label for="newsletter-sidebar-checkbox-27">
+<span class="newsletter-title">Marketing Weekly</span>
+<span class="secondary-label">Every Wednesday</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_marketing_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-sidebar-checkbox-28" name="site_newsletters" type="checkbox" value="28">
+<label for="newsletter-sidebar-checkbox-28">
+<span class="newsletter-title">Tech Weekly</span>
+<span class="secondary-label">Every Thursday</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_tech_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-sidebar-checkbox-1791" name="site_newsletters" type="checkbox" value="1791">
+<label for="newsletter-sidebar-checkbox-1791">
+<span class="newsletter-title">DTC Weekly</span>
+<span class="secondary-label">Every Tuesday</span>
+</label>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-sidebar-checkbox-1792" name="site_newsletters" type="checkbox" value="1792">
+<label for="newsletter-sidebar-checkbox-1792">
+<span class="newsletter-title">Operations Weekly</span>
+<span class="secondary-label">Every Monday</span>
+</label>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select user consent:</span></label>
+<input class="checkbox" id="id_user_consent-sidebar" name="user_consent" type="checkbox" value="1"/>
+<label for="id_user_consent-sidebar">
+<span class="signup-user-consent_box">
+<span>
+    By signing up to receive our newsletter, you agree to our
+    <a href="https://www.industrydive.com/terms-of-use/" target="_blank">Terms of Use</a> and
+    <a href="https://www.industrydive.com/privacy-policy/" target="_blank">Privacy Policy</a>. You can unsubscribe at anytime.
+</span>
+</span>
+</label>
+</li>
+</ul>
+<button class="button button--medium signup-button" type="submit" value="Sign up">Sign up</button>
+<label class="error email_error" style="display:none;">A valid email address is required.</label>
+<label class="error newsletter-error" style="display:none;">Please select at least one newsletter.</label>
+</form>
+</div>
+<div class="subscriber-demographics demographics-form" id="demographics-box-sidebar"></div>
+<script src="/static/js/subscriberDemographicsForm.js?393918120421"></script>
+<script>
+                var siteName = 'Retail Dive' || null;
+                if (siteName) {
+                    setupFormCallbackAndCreateFormIfSub(siteName, 'sidebar');
+                }
+            </script>
+<style>
+                .subscriber-demographics-form {
+                    width: 100%;
+                }
+            </style>
+<div class="sidebar-box" data-box-priority="2">
+<h3 class="sidebar-box__header sidebar-box__header--loud">
+            Most Popular
+        </h3>
+<ol class="sidebar-box-list sidebar-box-list--ordered">
+<li class="sidebar-box-list__item sidebar-box-list__item--ordered flex">
+<!-- image -->
+<div class="sidebar-box-list__image-container">
+<a class="analytics t-most-popular-sidebar-item-1 hide-small show-large" href="/news/retail-executives-second-quarter-inflation-inventory-supply-chain-walmart-target/630235/">
+<img alt="Photo of  Visible Supply Chain Management warehouse provided after Maersk acquisition" class="sidebar-box-list__image" height="324" itemprop="image" loading="lazy" sizes="25vw" src="/imgproxy/Vfe_nZ_TJ54c4hQ1MM732GV_FDY5Z-4ome5_pACurv0/g:ce/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIxMDgwNV9WaXNpYmxlX1NDTV9GdWxmaWxsbWVudF9DZW50ZXJfMV9NQi5qcGc.jpg" srcset="/imgproxy/yk_BAL_7Knh2xF36MfQYUi-7RcTVIK-BEF_7Oe9qLzA/g:ce/rs:fill:300:162:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIxMDgwNV9WaXNpYmxlX1NDTV9GdWxmaWxsbWVudF9DZW50ZXJfMV9NQi5qcGc.jpg 300w, /imgproxy/Vfe_nZ_TJ54c4hQ1MM732GV_FDY5Z-4ome5_pACurv0/g:ce/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIxMDgwNV9WaXNpYmxlX1NDTV9GdWxmaWxsbWVudF9DZW50ZXJfMV9NQi5qcGc.jpg 600w" width="600"/>
+</a>
+</div>
+<div class="sidebar-box-title-container">
+<a class="analytics t-most-popular-sidebar-item-1 sidebar-box-list__item-title" href="/news/retail-executives-second-quarter-inflation-inventory-supply-chain-walmart-target/630235/">Mid-year checkup: What retail execs are saying about inflation, inventory and more
+                        </a> <!--Article Title-->
+</div>
+</li>
+<li class="sidebar-box-list__item sidebar-box-list__item--ordered flex">
+<!-- image -->
+<div class="sidebar-box-list__image-container">
+<a class="analytics t-most-popular-sidebar-item-2 hide-small show-large" href="/news/bed-bath-beyond-bankruptcy-risk-what-happened/630011/">
+<img alt="" class="sidebar-box-list__image" height="324" itemprop="image" loading="lazy" sizes="25vw" src="/imgproxy/FtsRoifuohJpwRGXQ600bmZFXIuJ4L3nA7Jyl9Ngsn8/crop:8192:4428/g:nowe:0:339/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0dldHR5SW1hZ2VzLTEzNDQyODU2MjEuanBn.jpg" srcset="/imgproxy/7gzO371zqqE1JOAshNc3KaCchzQsva465KRXhjbMZx0/crop:8192:4428/g:nowe:0:339/rs:fill:300:162:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0dldHR5SW1hZ2VzLTEzNDQyODU2MjEuanBn.jpg 300w, /imgproxy/FtsRoifuohJpwRGXQ600bmZFXIuJ4L3nA7Jyl9Ngsn8/crop:8192:4428/g:nowe:0:339/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0dldHR5SW1hZ2VzLTEzNDQyODU2MjEuanBn.jpg 600w" width="600"/>
+</a>
+</div>
+<div class="sidebar-box-title-container">
+<div class="label label--medium">
+            
+                Deep Dive
+            
+            
+        </div>
+<a class="analytics t-most-popular-sidebar-item-2 sidebar-box-list__item-title" href="/news/bed-bath-beyond-bankruptcy-risk-what-happened/630011/">Bed Bath &amp; Beyond is at risk of filing for bankruptcy. How did it get here?
+                        </a> <!--Article Title-->
+</div>
+</li>
+<li class="sidebar-box-list__item sidebar-box-list__item--ordered flex">
+<!-- image -->
+<div class="sidebar-box-list__image-container">
+<a class="analytics t-most-popular-sidebar-item-3 hide-small show-large" href="/news/gap-inc-withdraws-forecast-athleta-old-navy/630569/">
+<img alt="Branches with small buds jutting from the right point toward a blue Gap sign with white lettering, mounted on a beige stone building." class="sidebar-box-list__image" height="324" itemprop="image" loading="lazy" sizes="25vw" src="/imgproxy/uIfY_e1gZvD5BaeSGW4Yn0RFHPpJGhT-Am9flRcaEuU/crop:6535:3532/g:nowe:353:1116/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIyX2FwcmlsX3JldGFpbC0yNy5qcGc.jpg" srcset="/imgproxy/lII64c0Gv6OG15TTc8D3cJ3fBpwHYRMHv0P11EGM4ls/crop:6535:3532/g:nowe:353:1116/rs:fill:300:162:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIyX2FwcmlsX3JldGFpbC0yNy5qcGc.jpg 300w, /imgproxy/uIfY_e1gZvD5BaeSGW4Yn0RFHPpJGhT-Am9flRcaEuU/crop:6535:3532/g:nowe:353:1116/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlLzIyX2FwcmlsX3JldGFpbC0yNy5qcGc.jpg 600w" width="600"/>
+</a>
+</div>
+<div class="sidebar-box-title-container">
+<a class="analytics t-most-popular-sidebar-item-3 sidebar-box-list__item-title" href="/news/gap-inc-withdraws-forecast-athleta-old-navy/630569/">Gap Inc. yanks forecast as Old Navy and Athleta stumble in Q2
+                        </a> <!--Article Title-->
+</div>
+</li>
+<li class="sidebar-box-list__item sidebar-box-list__item--ordered flex">
+<!-- image -->
+<div class="sidebar-box-list__image-container">
+<a class="analytics t-most-popular-sidebar-item-4 hide-small show-large" href="/news/ulta-dodges-inflation-sales-up-16-percent/630613/">
+<img alt="Ulta storefront" class="sidebar-box-list__image" height="324" itemprop="image" loading="lazy" sizes="25vw" src="/imgproxy/lkb5MUItcWAlGVKFEnKNKyZbAeAeWjoXHpjh6ZNRgAg/g:ce/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0V4dGVyaW9yX1N0b3JlZnJvbnRfUmlnaHQuanBn.jpg" srcset="/imgproxy/H6hOwdhXcNFn99E2alMr1yX9t15l0u08zIIxAVA9nRM/g:ce/rs:fill:300:162:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0V4dGVyaW9yX1N0b3JlZnJvbnRfUmlnaHQuanBn.jpg 300w, /imgproxy/lkb5MUItcWAlGVKFEnKNKyZbAeAeWjoXHpjh6ZNRgAg/g:ce/rs:fill:600:324:1/bG9jYWw6Ly8vZGl2ZWltYWdlL0V4dGVyaW9yX1N0b3JlZnJvbnRfUmlnaHQuanBn.jpg 600w" width="600"/>
+</a>
+</div>
+<div class="sidebar-box-title-container">
+<a class="analytics t-most-popular-sidebar-item-4 sidebar-box-list__item-title" href="/news/ulta-dodges-inflation-sales-up-16-percent/630613/">Ulta dodges inflation woes as sales grow more than 16%
+                        </a> <!--Article Title-->
+</div>
+</li>
+</ol>
+</div>
+<div class="sidebar-box hide-small show-large" data-box-priority="4">
+<h3 class="sidebar-box__header">Library resources</h3>
+<ul class="sidebar-box-list">
+<li class="sidebar-box-list__item flex">
+<div class="sidebar-box-list__icon sidebar-box-list__icon--soft">
+<img height="25" loading="lazy" src="/static/img/lib_icons/playbook-black.svg?141716111021" width="25"/>
+</div>
+<div>
+<div class="label label--soft">Playbook</div>
+<a class="analytics t-library-sidebar-item-1 sidebar-box-list__item-title" href="http://resources.industrydive.com/the-5-myths-about-ai-that-limit-your-supply-chain-efficiency?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=Peak" target="_blank">
+                            The 5 Myths About AI That Limit Your Supply Chain Efficiency
+                        </a>
+<span class="sponsor-label__leading-text secondary-label">Custom content for</span>
+<span class="sponsor-label__name secondary-label">Peak</span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex">
+<div class="sidebar-box-list__icon sidebar-box-list__icon--soft">
+<img height="25" loading="lazy" src="/static/img/lib_icons/playbook-black.svg?141716111021" width="25"/>
+</div>
+<div>
+<div class="label label--soft">Playbook</div>
+<a class="analytics t-library-sidebar-item-2 sidebar-box-list__item-title" href="http://resources.industrydive.com/preparing-for-peak-season-with-logistics-visibility?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=Tive" target="_blank">
+                            Preparing for Peak Season with Logistics Visibility
+                        </a>
+<span class="sponsor-label__leading-text secondary-label">Custom content for</span>
+<span class="sponsor-label__name secondary-label">Tive</span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex">
+<div class="sidebar-box-list__icon sidebar-box-list__icon--soft">
+<img height="25" loading="lazy" src="/static/img/lib_icons/playbook-black.svg?141716111021" width="25"/>
+</div>
+<div>
+<div class="label label--soft">Playbook</div>
+<a class="analytics t-library-sidebar-item-3 sidebar-box-list__item-title" href="http://resources.industrydive.com/harness-the-power-of-a-unified-customer-view?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=Amperity" target="_blank">
+                            Harness the Power of a Unified Customer View to Understand Your Customers Like Never Before
+                        </a>
+<span class="sponsor-label__leading-text secondary-label">Custom content for</span>
+<span class="sponsor-label__name secondary-label">Amperity</span>
+</div>
+</li>
+</ul>
+<a aria-label="View all library items" class="analytics t-library-sidebar-all sidebar-box__cta" href="/library/">View all</a>
+</div>
+<div class="sidebar-box js-pressrelease-sidebar-box" data-box-priority=" 6 ">
+<h3 class="sidebar-box__header">Company Announcements</h3>
+<ul class="sidebar-box-list">
+<li class="sidebar-box-list__item flex js-pressrelease" data-pressrelease-full-url="https://www.retaildive.com/press-release/20220805-blacksquare-to-provide-global-spirits-brand-beam-suntory-with-direct-to-con/">
+<div class="sidebar-box-list__thumbnail-container">
+<img alt="BlackSquare logo" height="48" loading="lazy" src="https://res.cloudinary.com/dmgi9movl/image/upload/dpr_2.0,h_48,w_48/v1659994760/press_release/assets/company_logos/Blacksquare_logo_250x250_mn3kjf.png" width="48">
+</img></div>
+<div class="sidebar-box-title-container">
+<a class="sidebar-box-list__item-title analytics t-pr-sidebar-item" href="/press-release/20220805-blacksquare-to-provide-global-spirits-brand-beam-suntory-with-direct-to-con/">BlackSquare to Provide Global Spirits Brand Beam Suntory with Direct-to-Consumer Ecommerce Tec…</a>
+<span class="secondary-label">
+                            From BlackSquare
+                        </span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex js-pressrelease" data-pressrelease-full-url="https://www.retaildive.com/press-release/20220810-duluth-trading-company-to-open-new-fulfillment-center-in-georgia/">
+<div class="sidebar-box-list__thumbnail-container">
+<img alt="Duluth Trading Company logo" height="48" loading="lazy" src="https://res.cloudinary.com/dmgi9movl/image/upload/dpr_2.0,h_48,w_48/v1660180667/press_release/assets/company_logos/Duluth-Trading-Company-Logo_kzlsva.jpg" width="48">
+</img></div>
+<div class="sidebar-box-title-container">
+<a class="sidebar-box-list__item-title analytics t-pr-sidebar-item" href="/press-release/20220810-duluth-trading-company-to-open-new-fulfillment-center-in-georgia/">Duluth Trading Company to Open New Fulfillment Center in Georgia</a>
+<span class="secondary-label">
+                            From Duluth Trading Company
+                        </span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex js-pressrelease" data-pressrelease-full-url="https://www.retaildive.com/press-release/20220811-oneview-commerce-supports-innovative-customer-engagement/">
+<div class="sidebar-box-list__thumbnail-container">
+<img alt="OneView Commerce logo" height="48" loading="lazy" src="https://res.cloudinary.com/dmgi9movl/image/upload/dpr_2.0,h_48,w_48/v1660224847/press_release/assets/company_logos/Social_Logo2_crlwqf.png" width="48">
+</img></div>
+<div class="sidebar-box-title-container">
+<a class="sidebar-box-list__item-title analytics t-pr-sidebar-item" href="/press-release/20220811-oneview-commerce-supports-innovative-customer-engagement/">OneView Commerce Supports Innovative Customer Engagement</a>
+<span class="secondary-label">
+                            From OneView Commerce
+                        </span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex js-pressrelease" data-pressrelease-full-url="https://www.retaildive.com/press-release/20220809-introducing-upshop-the-total-store-operations-platform/">
+<div class="sidebar-box-list__thumbnail-container">
+<img alt="Upshop logo" height="48" loading="lazy" src="https://res.cloudinary.com/dmgi9movl/image/upload/dpr_2.0,h_48,w_48/v1660096633/press_release/assets/company_logos/Assets_for_IndustyDive_PR_rc8lo5.png" width="48">
+</img></div>
+<div class="sidebar-box-title-container">
+<a class="sidebar-box-list__item-title analytics t-pr-sidebar-item" href="/press-release/20220809-introducing-upshop-the-total-store-operations-platform/">Introducing Upshop: The Total Store Operations Platform</a>
+<span class="secondary-label">
+                            From Upshop
+                        </span>
+</div>
+</li>
+</ul>
+<span class="sidebar-box__cta">
+<a aria-label="View all press release items" class="analytics t-pr-sidebar-all" href="/press-release/">View all</a> |
+            <a class="analytics t-pr-sidebar-start" href="/press-release/get-started/">Post a press release</a>
+</span>
+</div>
+<div class="sidebar-box hide-small show-large" data-box-priority="8">
+<h3 class="sidebar-box__header">What We're Reading</h3>
+<ul class="sidebar-box-list">
+<li class="sidebar-box-list__item">
+<img height="16" loading="lazy" src="https://www.google.com/s2/favicons?domain=https%3A//www.cnbc.com/2022/08/26/amazon-not-expected-to-bid-for-electronic-arts.html" width="16"/>
+<span class="label label--soft">CNBC</span>
+<a class="analytics t-wwr-sidebar-item sidebar-box-list__item-title" href="https://www.cnbc.com/2022/08/26/amazon-not-expected-to-bid-for-electronic-arts.html" target="_blank">
+                                        Amazon not expected to bid for Electronic Arts
+                                        <img alt="offsite link" class="off-site-link" height="12" loading="lazy" src="/static/img/offsite.svg?141716111021" width="12"/>
+</a>
+</li>
+<li class="sidebar-box-list__item">
+<img height="16" loading="lazy" src="https://www.google.com/s2/favicons?domain=https%3A//www.bloomberg.com/news/articles/2022-08-25/bed-bath-beyond-s-grasp-for-cash-puts-baby-brand-on-the-line%3Fmc_cid%3D930744ce95%26mc_eid%3D237fc93370%26sref%3DHhue1scO" width="16"/>
+<span class="label label--soft">Bloomberg</span>
+<a class="analytics t-wwr-sidebar-item sidebar-box-list__item-title" href="https://www.bloomberg.com/news/articles/2022-08-25/bed-bath-beyond-s-grasp-for-cash-puts-baby-brand-on-the-line?mc_cid=930744ce95&amp;mc_eid=237fc93370&amp;sref=Hhue1scO" target="_blank">
+                                        Bed Bath &amp; Beyond’s Grasp for Cash Puts Buybuy Baby Brand on the Line
+                                        <img alt="offsite link" class="off-site-link" height="12" loading="lazy" src="/static/img/offsite.svg?141716111021" width="12"/>
+</a>
+</li>
+<li class="sidebar-box-list__item">
+<img height="16" loading="lazy" src="https://www.google.com/s2/favicons?domain=https%3A//www.reuters.com/business/retail-consumer/shoppers-are-cutting-back-clothing-forcing-us-retailers-slash-prices-2022-08-25/" width="16"/>
+<span class="label label--soft">Reuters</span>
+<a class="analytics t-wwr-sidebar-item sidebar-box-list__item-title" href="https://www.reuters.com/business/retail-consumer/shoppers-are-cutting-back-clothing-forcing-us-retailers-slash-prices-2022-08-25/" target="_blank">
+                                        U.S. retailers slash clothing prices as shoppers cut purchases
+                                        <img alt="offsite link" class="off-site-link" height="12" loading="lazy" src="/static/img/offsite.svg?141716111021" width="12"/>
+</a>
+</li>
+</ul>
+<a aria-label="View all what we are reading items" class="analytics t-wwr-sidebar-all sidebar-box__cta" href="/what-we-are-reading">View all</a>
+</div>
+<div class="sidebar-box hide-small show-large" data-box-priority="10">
+<h3 class="sidebar-box__header">Events</h3>
+<ul class="sidebar-box-list">
+<li class="sidebar-box-list__item flex">
+<div class="sidebar-box-list__events-date">
+<span class="sidebar-box-list__events-date__day">
+                            08
+                        </span>
+<span class="sidebar-box-list__events-date__month">
+                            SEP
+                        </span>
+</div>
+<div class="sidebar-box-title-container__events">
+<span class="label label--soft">
+                            Webinar
+                            
+                                
+                                    | 3 p.m. ET
+                                
+                            
+                        </span>
+<a class="analytics t-events-sidebar-item sidebar-box-list__item-title sidebar-box-list__item-title--spaced" href="http://resources.industrydive.com/How-To-Leverage-Predictive-Analytics-to-Survive-a-Recession?utm_source=RD&amp;utm_medium=Event&amp;utm_campaign=Pecan" rel="noopener noreferrer" target="_blank">How to Leverage Predictive Analytics to Survive a Recession
+                        </a>
+<span class="label label--weak-italic">Presented by studioID and Pecan</span>
+</div>
+</li>
+<li class="sidebar-box-list__item flex">
+<div class="sidebar-box-list__events-date sidebar-box-list__events-date--editorial">
+<span class="sidebar-box-list__events-date__day sidebar-box-list__events-date__day--editorial">
+                            06
+                        </span>
+<span class="sidebar-box-list__events-date__month sidebar-box-list__events-date__month--editorial">
+                            OCT
+                        </span>
+</div>
+<div class="sidebar-box-title-container__events">
+<span class="label label--loud">
+                            Virtual Event
+                            
+                                
+                                    | 2 p.m. ET
+                                
+                            
+                        </span>
+<a class="analytics t-events-sidebar-item sidebar-box-list__item-title sidebar-box-list__item-title--spaced" href="https://resources.industrydive.com/signed-sealed-delivered?utm_source=RD&amp;utm_medium=Event&amp;utm_campaign=HolidayDiveLive" rel="noopener noreferrer" target="_blank">Insights into the 2022 Holiday Season
+                        </a>
+<span class="label label--weak-italic">Presented by Industry Dive</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="sidebar-box hide-small show-large" data-box-priority="8">
+<h3 class="sidebar-box__header">Industry Intel</h3>
+<ul class="sidebar-box-list">
+<li class="sidebar-box-list__item">
+<a class="analytics t-intel-sidebar-item sidebar-box-list__item-title" href="http://resources.industrydive.com/ecommerce-profitability?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=Coveo" target="_blank">
+                        The Elephant in the Room: Ecommerce Profitability  A discussion with Google’s ex-Chief Evangelist
+                    </a>
+<span class="secondary-label secondary-label--all-caps">Webinar - on demand</span>
+<span class="secondary-label">•</span>
+<span class="secondary-label">Provided by Coveo</span>
+</li>
+<li class="sidebar-box-list__item">
+<a class="analytics t-intel-sidebar-item sidebar-box-list__item-title" href="https://resources.industrydive.com/millenial-movers?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=RD" target="_blank">
+                        Millenial Movers:  The Untapped Opportunity to Drive Sales
+                    </a>
+<span class="secondary-label secondary-label--all-caps">Webinar - on demand</span>
+<span class="secondary-label">•</span>
+<span class="secondary-label">Provided by V12</span>
+</li>
+<li class="sidebar-box-list__item">
+<a class="analytics t-intel-sidebar-item sidebar-box-list__item-title" href="http://resources.industrydive.com/the-modern-age-of-cx-messaging?utm_source=RD&amp;utm_medium=Library&amp;utm_campaign=Kustomer" target="_blank">
+                        The Modern Age of CX Messaging
+                    </a>
+<span class="secondary-label secondary-label--all-caps">Webinar - on demand</span>
+<span class="secondary-label">•</span>
+<span class="secondary-label">Provided by Kustomer</span>
+</li>
+</ul>
+</div>
+<div class="hybrid-ad-wrapper hide-small show-large">
+<div class="hybrid-ad-inner-wrapper">
+<div class="hide-small show-large">
+<div data-container-ad-unit-id="/21662595662/retaildive/retaildivehybrid2-desktop"></div>
+<div id="dfp-hybrid2-desktop">
+<script>
+                    waitToLoadAds.push(function() {
+                        googletag.cmd.push(function() {
+                            if (window.dfp_visibility == 'desktop' ) {
+                                
+                                    googletag.display('dfp-hybrid2-desktop');
+                                
+                                googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                                    
+                                        var adUnitPath = '/21662595662/retaildive/retaildivehybrid2';
+                                    
+                                    var onProformative = false;
+                                    if (onProformative && event.slot.getAdUnitPath() === adUnitPath && !event.isEmpty ) {
+                                        var adUnitPathWithVisibility = adUnitPath + '-desktop';
+                                        var selector = '.pf-comments__ad-wrapper [data-container-ad-unit-id="' + adUnitPathWithVisibility + '"]';
+                                        if (!$(selector).closest('.pf-comments__ad-wrapper').hasClass('borders')) {
+                                            $(selector).closest('.pf-comments__ad-wrapper').addClass('borders')
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    });
+                </script>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div> <!-- ends page-inner-wrapper -->
+<section class="pre-footer">
+</section>
+<hr class="footer-hr"/>
+<footer>
+<div class="custom-article-footer">
+<div class="row columns">
+<div class="footer-grid">
+<div class="footer-links">
+<a href="https://www.industrydive.com">
+<img alt="Industry Dive Logo" class="pub-logo-footer" height="28" src="https://d12v9rtnomnebu.cloudfront.net/logo/corporate/ID_black.svg">
+</img></a>
+<ul class="social-icon-list">
+<li>
+<a aria-label="Industry Dive LinkedIn" class="social-icon analytics t-sitefooter-linkedin" href="https://www.linkedin.com/company/retail-dive-retail-news-and-trends">
+<svg class="social-icon__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 15.1969V21H19.5714V15.5851C19.5714 14.2248 19.0742 13.2973 17.8347 13.2973C16.8866 13.2973 16.3235 13.9225 16.0742 14.5353C15.9832 14.7517 15.9608 15.0526 15.9608 15.3556V21H12.5294C12.5294 21 12.5763 11.8285 12.5294 10.8805H15.9608V12.3142C15.9538 12.3259 15.9447 12.3369 15.9377 12.3486H15.9601L15.9608 12.3142C16.416 11.6259 17.229 10.6414 19.0511 10.6414C21.3074 10.6414 23 12.0875 23 15.1969ZM8.94118 6C7.76751 6 7 6.75089 7 7.74498C7 8.72053 7.7465 9.4886 8.90266 9.49409H8.92507C10.1225 9.49409 10.8648 8.71641 10.8648 7.74498C10.8375 6.75089 10.112 6 8.93838 6H8.94118ZM7.20448 21H10.6331V10.8805H7.20378L7.20448 21Z" fill="#76797C"></path>
+</svg>
+</a>
+</li>
+<li>
+<a aria-label="Industry Dive Facebook" class="social-icon analytics t-sitefooter-facebook" href="https://www.facebook.com/retaildive">
+<svg class="social-icon__icon" fill="none" height="29" viewbox="0 0 29 29" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.2 6.5H8.3C7.857 6.5 7 7.3575 7 7.8V19.7C7 20.142 7.8575 21 8.3 21H14.4965V15.494H12.4985V13.504H14.497V11.973C14.497 10.1 15.9145 8.988 17.5855 8.988C18.3855 8.988 18.8075 9.0745 19.008 9.101V10.997H17.59C16.6815 10.997 16.512 11.447 16.512 12.081V13.5045H19.0345L18.7045 15.4935H16.5115V21H20.2C20.642 21 21.5 20.142 21.5 19.7V7.8C21.5 7.3575 20.642 6.5 20.2 6.5Z" fill="#76797C"></path>
+</svg>
+</a>
+</li>
+<li>
+<a aria-label="Industry Dive Twitter" class="social-icon analytics t-sitefooter-twitter" href="https://twitter.com/RetailDive">
+<svg class="social-icon__icon" fill="none" height="30" viewbox="0 0 29 30" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.2578 10.1038C22.5648 15.9714 18.0738 20.9776 12.2241 21.2863C10.0307 21.4012 7.85581 20.8298 6 19.6509C7.89814 19.7778 9.7759 19.1942 11.2736 18.0156C10.5601 17.9304 9.88516 17.6441 9.32697 17.1901C8.76877 16.736 8.35011 16.1326 8.11942 15.4497C8.68282 15.5414 9.25746 15.504 9.80541 15.3412C8.95867 15.1816 8.19099 14.7384 7.62795 14.084C7.06492 13.4297 6.73988 12.603 6.70601 11.7392C7.18978 11.9335 7.7081 12.0264 8.22901 12.012C7.50378 11.4492 7.00543 10.6426 6.82564 9.7406C6.64584 8.83855 6.79669 7.90169 7.25044 7.10235C8.18342 8.25873 9.34779 9.20585 10.6683 9.88252C11.9889 10.5592 13.4362 10.9504 14.9168 11.0307C14.7762 10.5719 14.7271 10.0897 14.7722 9.61183C14.8174 9.13392 14.956 8.66962 15.18 8.24545C15.404 7.82129 15.7091 7.44555 16.0778 7.13972C16.4466 6.83388 16.8718 6.60393 17.3291 6.46301C18.0223 6.24844 18.7636 6.24668 19.4578 6.45794C20.1521 6.66921 20.7675 7.08385 21.2251 7.64865C22.0586 7.49815 22.8539 7.18256 23.5645 6.72029C23.2935 7.60574 22.6885 8.34991 21.8785 8.7941C22.615 8.71959 23.3329 8.51683 24 8.19494C23.6789 9.02858 23.0569 9.71049 22.2578 10.1052V10.1038Z" fill="#76797C"></path>
+</svg>
+</a>
+</li>
+<li>
+<a aria-label="Industry Dive RSS feed" class="social-icon analytics t-sitefooter-rss" href="https://www.retaildive.com/feeds/news/">
+<svg class="social-icon__icon" fill="none" height="30" viewbox="-6 -7 29 30" width="29" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.2637 3.57804C7.66172 1.41209 4.38397 0.224015 0.998047 0.219543V3.60269C2.98705 3.59546 4.94447 4.0999 6.68208 5.06753C8.41969 6.03516 9.87904 7.43341 10.9198 9.12785C11.9985 10.8982 12.5709 12.9303 12.5749 15.0032H15.6295C15.6306 12.8205 15.1499 10.6645 14.2217 8.68886C13.2935 6.71326 11.9406 4.96675 10.2596 3.57393L10.2637 3.57804ZM2.8982 11.2222C2.5232 11.2222 2.15662 11.3333 1.84482 11.5416C1.53301 11.7499 1.28999 12.0459 1.14649 12.3923C1.00298 12.7386 0.965431 13.1197 1.03859 13.4874C1.11175 13.8551 1.29233 14.1928 1.5575 14.4579C1.82266 14.7229 2.16051 14.9035 2.5283 14.9766C2.8961 15.0497 3.27733 15.0122 3.62379 14.8687C3.97024 14.7253 4.26637 14.4823 4.47471 14.1706C4.68305 13.8589 4.79425 13.4925 4.79425 13.1176C4.79457 12.8681 4.74564 12.6209 4.65027 12.3903C4.55489 12.1597 4.41494 11.9502 4.23843 11.7737C4.06192 11.5973 3.85232 11.4573 3.62163 11.362C3.39095 11.2667 3.14371 11.2177 2.89409 11.2181L2.8982 11.2222ZM6.96574 7.69601C5.28286 6.31745 3.17377 5.56508 0.998047 5.56716V8.41522C2.17243 8.41433 3.32575 8.7269 4.33887 9.32064C5.35199 9.91438 6.18816 10.7678 6.761 11.7926C7.30633 12.7791 7.59288 13.8876 7.59391 15.0147H10.4552V15.0089C10.4508 13.6069 10.1351 12.2233 9.53092 10.958C8.92677 9.69264 8.04924 8.57714 6.96163 7.6919L6.96574 7.69601Z" fill="#76797C"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+<div class="link-wrapper">
+<div class="footer-links">
+<h4 class="uppercase-heading-01">Explore</h4>
+<ul class="list-no-bullets">
+<li>
+<a class="analytics t-about-sitefooter" href="/about/">About</a>
+</li>
+<li>
+<a class="analytics t-editors-sitefooter" href="/editors/">Editorial Team</a>
+</li>
+<li>
+<a class="analytics t-feedback-sitefooter" href="/contact/">Contact Us</a>
+</li>
+<li>
+<a class="analytics t-signup-sitefooter" href="/signup/?signup_location=footer-list&amp;signup_path=/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency">Newsletter</a>
+</li>
+<li>
+<a class="analytics t-reprints-sitefooter" href="https://www.industrydive.com/article-reprints/">Article Reprints</a>
+</li>
+<li>
+<a class="analytics t-pr-sitefooter-all" href="/press-release/">Press Releases</a>
+</li>
+<li>
+<a class="analytics t-wwr-sitefooter" href="/what-we-are-reading/">What We're Reading</a>
+</li>
+</ul>
+</div>
+<div class="second-column">
+<div class="footer-links">
+<h4 class="uppercase-heading-01">Reach our audience</h4>
+<ul class="list-no-bullets">
+<li>
+<a class="analytics t-advertising-sitefooter" href="/advertise/">Advertising</a>
+</li>
+<li>
+<a class="analytics t-pr-sitefooter-all" href="/press-release/get-started/">Post a press release</a>
+</li>
+<li>
+<a class="analytics t-pr-sitefooter-all" href="/opinion/">Submit an opinion piece</a>
+</li>
+</ul>
+</div>
+<div class="footer-links">
+<h4 class="uppercase-heading-01">Related Publications</h4>
+<ul class="list-no-bullets">
+<li>
+<a class="analytics t-sitefooter-related-marketing-dive" href="https://www.marketingdive.com">Marketing Dive</a>
+</li>
+<li>
+<a class="analytics t-sitefooter-related-supply-chain-dive" href="https://www.supplychaindive.com">Supply Chain Dive</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<hr class="footer-hr"/>
+<div class="baseline-footer-wrapper">
+<div class="baseline-footer">
+    © 2022 <a href="http://www.industrydive.com">Industry Dive</a>. All rights reserved. | View our <a href="http://www.industrydive.com/industries/">other publications</a>
+    | <a href="http://www.industrydive.com/privacy-policy/">Privacy policy</a>
+    | <a href="http://www.industrydive.com/terms-of-use/">Terms of use</a>
+    | <a href="http://www.industrydive.com/takedown-policy/">Take down policy</a>.
+    <br/>
+<a href="#" onclick="Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')">Cookie Preferences / Do Not Sell</a>
+</div>
+</div>
+</div>
+</div>
+<!-- mobile menu, not visible on desktop, must go AFTER footer -->
+<nav class="mobile-menu">
+<div class="mm-top-bar">
+<button class="mobile-menu-toggle">
+<img alt="menu" height="20" src="/static/img/menu_icons/close.svg?273117231121" width="20">
+</img></button>
+<div class="mm-search">
+<form action="/search/" data-ajax="false" method="GET">
+<label for="search-mobile">
+<span class="screen-reader-text">Search</span>
+<input data-role="none" id="search-mobile" name="q" placeholder="Search" type="search"/>
+</label>
+<button class="analytics t-search-navigation-mobile" data-role="none" type="submit" value="">
+<img alt="search" height="15" src="/static/img/menu_icons/search.svg?320116291121" width="15"/>
+</button>
+</form>
+</div>
+</div>
+<ul class="mm-list list-no-bullets">
+<li>
+<a class="analytics t-dash-navigation-mobile" href="/">
+<span>Home</span>
+</a>
+</li>
+<li class="mm-accordion">
+<button>
+<span>Topics</span>
+<span class="accordion-toggle-arrow">
+<img alt="down arrow" height="9" loading="lazy" src="/static/img/menu_icons/chevron_down.svg?102717100918" width="16"/>
+</span>
+</button>
+<ul class="list-no-bullets">
+<li>
+<a class="analytics t-topic-navigation-mobile-technology" href="/topic/technology/">Technology</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-marketing" href="/topic/marketing/">Marketing</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-dtc" href="/topic/dtc/">DTC</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-operations" href="/topic/operations/">Operations</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-distressed-retail" href="/topic/distressed-retail/">Distressed Retail</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-store-concepts" href="/topic/store-concepts/">Store Concepts</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-consumer-trends" href="/topic/consumer-trends/">Trends</a>
+</li>
+<li>
+<a class="analytics t-topic-navigation-mobile-financial-news" href="/topic/financial-news/">Financial News</a>
+</li>
+</ul>
+</li>
+<li>
+<a class="analytics t-deepdive-navigation-mobile" href="/deep-dive/">
+<span>Deep Dive</span>
+</a>
+</li>
+<li>
+<a class="analytics t-opinion-navigation-mobile" href="/opinion/">
+<span>Opinion</span>
+</a>
+</li>
+<li>
+<a class="analytics t-podcasts-navigation-mobile" href="/topic/podcasts/">
+<span>Podcasts</span>
+</a>
+</li>
+<li>
+<a class="analytics t-library-navigation-mobile" href="/library/">
+<span>Library</span>
+</a>
+</li>
+<li>
+<a class="analytics t-events-navigation-mobile" href="/events/">
+<span>Events</span>
+</a>
+</li>
+</ul>
+<section class="signup mm-signup">
+<div class="row">
+<div class="large-9 medium-10 medium-centered columns">
+<h3 class="display-heading-03 display-heading-03--loud">Get Retail Dive in your inbox</h3>
+<p class="subhead">The free newsletter covering the top industry headlines</p>
+<form action="/signup/" class="form js-form-email-validate" method="POST" name="signup">
+<label class="email-input js-email-input" for="id_6cb384_email">
+<span class="screen-reader-text">Email:</span>
+<input class="email" id="id_6cb384_email" name="email" placeholder="Work email address" required="" type="email"/>
+</label>
+<input name="signup_box_location" type="hidden" value="integrated_menu"/>
+<input name="signup_initial_url_path" type="hidden" value="/ex/mobilecommercedaily/starbucks-integrates-with-bitcoin-wallet-to-allow-app-users-to-pay-with-cryptocurrency"/>
+<input id="id_6cb384_js_enabled" name="js_enabled" type="hidden" value="0"/>
+<ul class="signup-list list-no-bullets">
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-integrated_menu-checkbox-8" name="site_newsletters" type="checkbox" value="8">
+<label for="newsletter-integrated_menu-checkbox-8">
+<span class="newsletter-title">Daily Dive</span>
+<p class="newsletter-description">Topics covered: retail tech, e-commerce, in-store operations, marketing, and more.</p>
+<span class="secondary-label">M-F</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-integrated_menu-checkbox-27" name="site_newsletters" type="checkbox" value="27">
+<label for="newsletter-integrated_menu-checkbox-27">
+<span class="newsletter-title">Marketing Weekly</span>
+<span class="secondary-label">Every Wednesday</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_marketing_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-integrated_menu-checkbox-28" name="site_newsletters" type="checkbox" value="28">
+<label for="newsletter-integrated_menu-checkbox-28">
+<span class="newsletter-title">Tech Weekly</span>
+<span class="secondary-label">Every Thursday</span>
+</label>
+<a class="primary-link" href="/user_media/thumbnails/newsletter_lists/retail_tech_2018.png" target="_blank">view sample</a>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-integrated_menu-checkbox-1791" name="site_newsletters" type="checkbox" value="1791">
+<label for="newsletter-integrated_menu-checkbox-1791">
+<span class="newsletter-title">DTC Weekly</span>
+<span class="secondary-label">Every Tuesday</span>
+</label>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select Newsletter:</span></label>
+<input class="checkbox" id="newsletter-integrated_menu-checkbox-1792" name="site_newsletters" type="checkbox" value="1792">
+<label for="newsletter-integrated_menu-checkbox-1792">
+<span class="newsletter-title">Operations Weekly</span>
+<span class="secondary-label">Every Monday</span>
+</label>
+</input></li>
+<li>
+<label><span class="screen-reader-text">Select user consent:</span></label>
+<input class="checkbox" id="id_user_consent-integrated_menu" name="user_consent" type="checkbox" value="1"/>
+<label for="id_user_consent-integrated_menu">
+<span class="signup-user-consent_box">
+<span>
+    By signing up to receive our newsletter, you agree to our
+    <a href="https://www.industrydive.com/terms-of-use/" target="_blank">Terms of Use</a> and
+    <a href="https://www.industrydive.com/privacy-policy/" target="_blank">Privacy Policy</a>. You can unsubscribe at anytime.
+</span>
+</span>
+</label>
+</li>
+</ul>
+<button class="button button--medium signup-button" type="submit" value="Sign up">Sign up</button>
+<label class="error email_error" style="display:none;">A valid email address is required.</label>
+<label class="error newsletter-error" style="display:none;">Please select at least one newsletter.</label>
+</form>
+</div>
+</div>
+</section>
+</nav>
+<!-- Track signups for Facebook Conversions API -->
+<script src="/static/js/dist/signupValidation.bundle.js?440516240822" type="module"></script>
+<script src="/static/js/dist/gtmEvents.bundle.js?440516240822" type="module"></script>
+<!-- Convert straight quotes to curly -->
+<script src="/static/js/dist/smartQuotes.bundle.js?440516240822" type="module"></script>
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+        if(typeof twttr !== 'undefined' && typeof twttr.conversion !== 'undefined') {
+            twttr.conversion.trackPid('l6guz', { tw_sale_amount: 0, tw_order_quantity: 0 });
+        } else {
+            window.console && console.log && console.log('twttr undefined; Unable to track twitter retargeting');
+        }
+    </script>
+<noscript>
+<img alt="" height="1" src="https://analytics.twitter.com/i/adsct?txn_id=l6guz&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1">
+<img alt="" height="1" src="//t.co/i/adsct?txn_id=l6guz&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1">
+</img></img></noscript>
+<script>
+            // Set cookie if we're on mobile app. Expire if we're not. This affects
+            // which template is used to display the site to the user.
+            $(document).ready(function() {
+                // Get integer value of mobileapp param from URL and default to 0 if it doesn't exist
+                var mobileapp = '';
+
+                // Set cookie if mobileapp is 1 or 2 or expire cookie if mobileapp == 0
+                if (mobileapp == '0') {
+                    document.cookie = 'mobileapp=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                } else if (mobileapp == '1' || mobileapp == '2') {
+                    document.cookie = 'mobileapp=' + mobileapp + '; path=/;';
+                }
+
+                // There's no need to immediately load or preload print.css since it's not needed on page
+                // load. Therefore, load it when the document is ready
+                var stylesheet=document.createElement("link");
+                stylesheet.setAttribute("rel", "stylesheet");
+                stylesheet.setAttribute("type", "text/css");
+                stylesheet.setAttribute("media", "print");
+                stylesheet.setAttribute("href", "/static/css/print.css?540416240822");
+                document.getElementsByTagName("head")[0].appendChild(stylesheet);
+            });
+        </script>
+<!-- Sailthru Horizon -->
+<!-- <script type="text/javascript" src="https://ak.sail-horizon.com/horizon/v1.js"></script> -->
+<script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        // Sailthru Personalization Engine Setup
+        var sailthru_setup = {
+            customerId: '12ab35a80530ffa5450add9c09f5de04',
+            domain: 'horizon.retaildive.com',
+            spider: false
+        };
+        
+        if (window.Sailthru) {
+            Sailthru.init(sailthru_setup);
+        }
+    });
+</script>
+</body>
+</html>

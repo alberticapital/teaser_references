@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<!-- begin spin_special_output(head_start) -->
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="js/jquery.js" type="text/javascript" wd_script_id="jquery.js"></script>
+<style nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/css" wd_script_id="search_form_style">
+		.wd_search_form .wd_input_datepicker {
+			margin-right: 2px;
+		}
+		.wd_search_type_checkbox {
+			margin-left: 20px;
+		}
+		</style>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="js/jquery-webdriver.js" type="text/javascript" wd_script_id="jquery-webdriver.js"></script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="js/webdriver.js" type="text/javascript" wd_script_id="webdriver.js"></script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript" wd_script_id="search_form_script">
+			function wd_toggle_search_form(link, advanced) {
+				var $ = webDriver.jQuery;
+				var $container = $(link).closest(".wd_search_form_container");
+				var basic_form = $container.find(".wd_search_form_basic");
+				var basic_query = basic_form.find('input[name="query"]');
+				var advanced_form = $container.find(".wd_search_form_advanced");
+				var advanced_query = advanced_form.find('input[name="query"]');
+
+				if (advanced) {
+					advanced_query.val(basic_query.val());
+					advanced_form.show();
+					basic_form.hide();
+				} else {
+					basic_query.val(advanced_query.val());
+					basic_form.show();
+					advanced_form.hide();
+				}
+			}
+
+			function wd_toggle_search_type_checkboxes(radio) {
+				var $ = webDriver.jQuery;
+				var $radio = $(radio);
+				var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+				var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+				$checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+				$checkboxes.toggle(!all);
+			}
+
+			webDriver.jQuery(function ($) {
+				$('.wd_search_type_radio input[type="radio"]').each(function() {wd_toggle_search_type_checkboxes(this);});
+			});
+		</script>
+<style nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/css" wd_script_id="featureboxes_style">
+		.wd_featurebox_icon {
+			display: inline;
+		}
+		.wd_featurebox_icon img {
+			vertical-align: middle;
+		}
+		div.wd_featurebox_group div.wd_tabs_wrapper {
+			border: none;
+			border-bottom: 1px solid #E1E1E1;
+			padding: 0 0 5px 0;
+		}
+		div.wd_featurebox_group div.wd_featurebox {
+			border: none;
+			padding: 8px 0 0 0;
+		}
+		div.wd_featurebox_group li.wd_tab {
+			float: none;
+			color: #666666;
+		}
+		div.wd_featurebox_group li.wd_tab-active {
+			border: none;
+			background-color: transparent;
+			color: #000000;
+			font-weight: bold;
+		}
+		div.wd_featurebox_group li.wd_tab-inactive {
+			cursor: auto;
+		}
+	</style>
+<style nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/css" wd_script_id="addthis_WCAG_style">
+		#at15s .at4-icon {
+			height: auto !important;
+			line-height: auto !important;
+			min-height: 16px;
+		}
+		span.wd_page_tool .at-share-tbx-element .at-share-btn {
+			margin: 0;
+		}
+		span.wd_page_tool .at-share-tbx-element .at-share-btn + .at-share-btn {
+			margin-left: 2ex;
+		}
+		div.wd_page_toolbar td span.wd_page_tool .at-share-tbx-element .at-share-btn + .at-share-btn {
+			margin-left: 4px;
+		}
+		li.wd_tool .at-resp-share-element .at-share-btn {
+			margin: 0;
+		}
+		li.wd_tool .at-resp-share-element .at-share-btn + .at-share-btn {
+			margin-left: 2px;
+		}
+	</style>
+<style nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/css" wd_script_id="toolbar_style">
+			div.wd_toolbar {
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+				line-height: 1;
+			}
+			div.wd_toolbar-page {
+				clear: both;
+			}
+			div.wd_toolbar ul.wd_tools {
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+				padding: 5px 0;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool {
+				display: block;
+				list-style-type: none;
+				margin-right: 5px;
+				padding: 0;
+				float: right;
+			}
+			span.wd_tool_icon > a:link,
+			span.wd_tool_icon > a:visited {
+				border-radius: 2px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 7px;
+				font-size: 16px;
+				line-height: 1;
+				text-align: center;
+				color: #ffffff;
+				background-color: #8d8d8d;
+			}
+			span.wd_tool_icon > a:hover {
+				color: #ffffff;
+				background-color: #666666;
+				text-decoration: none;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool-addthis {
+				float: left;
+			}
+		</style>
+<style nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/css" wd_script_id="template_list_inline_style">
+						ul.wd_layout-inline {
+							display: inline-block;
+							list-style: none;
+							padding: 0;
+							margin: 0;
+						}
+						ul.wd_layout-inline li {
+							display: inline-block;
+							padding: 0;
+							margin: 0 0 0 1em;
+						}
+					</style>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="js/wd_resize.js" type="text/javascript" wd_script_id="wd_resize.js"></script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript">webDriver.push_jQuery();</script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript" wd_script_id="view_printable_script">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript" wd_script_id="format_news_script">
+(function($) {
+	webDriver.formatNews = function() {
+		var $news = $(this);
+		var print_url = $news.attr("wd_print_url");
+		$news.find("table").each(function() {
+			var $table = $(this);
+			var $parent = $table.parent();
+			if ($parent.innerWidth() < $table.outerWidth()) {
+				if ($parent.hasClass("wd_news_table")) {
+					$parent.find(".fullscreen-button").show();
+				} else {
+					var $btn = $("<button>View News Release Full Screen</button>")
+						.addClass("fullscreen-button")
+						.on("click", function() {
+							if (print_url)
+								window.open(print_url, "_blank", "");
+							else
+								view_printable();
+						})
+					;
+
+					var $div = $("<div></div>)")
+						.addClass("wd_news_table")
+						.css("overflow-x", "auto")
+						.append($btn)
+					;
+
+					$table.replaceWith($div);
+					$div.append($table);
+				}
+			} else {
+				if ($parent.hasClass("wd_news_table"))
+					$parent.find(".fullscreen-button").hide();
+			}
+		});
+	}
+})(webDriver.jQuery);
+</script>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript">webDriver.pop_jQuery();</script>
+<!-- end spin_special_output(head_start) -->
+<!-- Required meta tags -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- Bootstrap CSS -->
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<title>Press Release: PayPal Users Can Now Transfer, Send, and Receive Bitcoin, Ethereum, Bitcoin Cash, and Litecoin</title>
+<meta content="PayPal, crypto, sending, receiving, bitcoin, Ethereum, wallets" name="keywords">
+<meta content="PayPal now supports the transfer of cryptocurrencies between PayPal and other wallets and exchanges." name="description">
+<meta content="summary" name="twitter:card"/>
+<meta content="PayPal Users Can Now Transfer, Send, and Receive Bitcoin, Ethereum, Bitcoin Cash, and Litecoin" name="twitter:title"/>
+<meta content="PayPal now supports the transfer of cryptocurrencies between PayPal and other wallets and exchanges." name="twitter:description"/>
+<meta content="https://newsroom.paypal-corp.com/image/PayPal+Crypto+Transfers+Launch+Social+Image+3x2.jpg" name="twitter:image"/>
+<meta content="PayPal Newsroom" property="og:site_name"/>
+<meta content="https://newsroom.paypal-corp.com/2022-06-07-PayPal-Users-Can-Now-Transfer-Send-and-Receive-Bitcoin-Ethereum-Bitcoin-Cash-and-Litecoin" property="og:url"/>
+<meta content="PayPal Users Can Now Transfer, Send, and Receive Bitcoin, Ethereum, Bitcoin Cash, and Litecoin" property="og:title"/>
+<meta content="PayPal now supports the transfer of cryptocurrencies between PayPal and other wallets and exchanges." property="og:description"/>
+<meta content="https://newsroom.paypal-corp.com/image/PayPal+Crypto+Transfers+Launch+Social+Image+3x2.jpg" name="image" property="og:image"/>
+<link href="favicons.png" rel="shortcut icon" type="image/icon"/>
+<!-- HREF Lang -->
+<link href="https://newsroom.paypal-corp.com/" hreflang="en-US" rel="alternate">
+<link href="https://newsroom.deatch.paypal-corp.com/" hreflang="de" rel="alternate"/>
+<link href="https://newsroom.ca.paypal-corp.com/" hreflang="en-CA" rel="alternate">
+<link href="https://newsroom.uk.paypal-corp.com/" hreflang="en-GB" rel="alternate">
+<link href="https://newsroom.au.paypal-corp.com/" hreflang="en-AU" rel="alternate">
+<link href="https://newsroom.latam.paypal-corp.com/" hreflang="es-MX" rel="alternate"/>
+<link href="https://newsroom.es.paypal-corp.com/" hreflang="es-ES" rel="alternate"/>
+<link href="https://newsroom.china.paypal-corp.com/" hreflang="zh-cn" rel="alternate"/>
+<link href="https://newsroom.br.paypal-corp.com/" hreflang="pt-br" rel="alternate"/>
+<link href="https://newsroom.fr.paypal-corp.com/" hreflang="fr-fr" rel="alternate"/>
+<link href="https://newsroom.in.paypal-corp.com/" hreflang="en-in" rel="alternate"/>
+<link href="https://newsroom.it.paypal-corp.com/" hreflang="it-it" rel="alternate"/>
+<link href="https://newsroom.jp.paypal-corp.com/" hreflang="ja-jp" rel="alternate"/>
+<!-- End HREF Lang -->
+<!-- MediaRoom Stylesheets -->
+<link href="slick/slick.css" rel="stylesheet" type="text/css"/>
+<link href="slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/wdtypography.css" rel="stylesheet" type="text/css"/>
+<link href="css/wdcustomclasses.css" rel="stylesheet" type="text/css"/>
+<link href="css/wdheaderandfooter.css" rel="stylesheet" type="text/css"/>
+<link href="css/wdbuttonformsandtools.css" rel="stylesheet" type="text/css"/>
+<link href="css/wdcontent.css" rel="stylesheet" type="text/css"/>
+<link href="https://newsroom.paypal-corp.com/news?pagetemplate=rss" rel="alternate" title="News  |  PayPal Newsroom" type="application/rss+xml"/> <!-- END MediaRoom Stylesheets -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PH333GX');</script>
+<!-- End Google Tag Manager -->
+<!-- Canonical Overrides -->
+<!-- Meta Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1367141343484665');
+	fbq('track', 'PageView');
+	</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1367141343484665&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Knotch Code -->
+<script async="" data-account="2b6b21ce-0950-4cc2-8698-7a9141aa8fd6" src="https://www.knotch-cdn.com/unit/latest/knotch.min.js"></script>
+<!-- END Knotch Code -->
+<!-- begin spin_special_output(head_end) -->
+<!-- OneTrust Cookies Consent Notice start -->
+<script charset="UTF-8" src="" type="text/javascript"></script>
+<script type="text/javascript">
+	function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->
+<link href="https://newsroom.paypal-corp.com/2022-06-07-PayPal-Users-Can-Now-Transfer-Send-and-Receive-Bitcoin-Ethereum-Bitcoin-Cash-and-Litecoin" rel="canonical">
+<!-- end spin_special_output(head_end) -->
+<script async="" src="/cdn-cgi/bm/cv/669835187/api.js"></script></link></link></link></link></link></meta></meta></head>
+<body class="wd_pageid_20295 wd_item_page wd_item_122785">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-PH333GX" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="">
+<nav class="navbar navbar-expand-lg bg-light">
+<div class="wd_logo-wrap"><a class="navbar-brand" href="https://newsroom.paypal-corp.com/home"><img src="images/Newsroom Logo.png"/></a></div>
+<!-- Start Mobile Search  -->
+<div class="mobile_search-container">
+<div class="wd_search_form_container"><form action="https://newsroom.paypal-corp.com/search-results" class="wd_search_form wd_search_form_basic" method="get" name="basic_search"><input name="s" type="hidden" value="search_results"/><input name="query" placeholder="Search..." size="32" title="Search..." type="text" value=""/> <input name="submit" type="submit" value="Search"/></form>
+</div> </div>
+<!-- END Mobile Search -->
+<div class="mobile-site-search-bttn">
+<i class="fas fa-search"></i>
+<i class="fas fa-times"></i>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse wd_nav navbar-collapse" id="mobileNavbarNavDropdown">
+<button aria-label="Close navigation" class="wd_mobile-nav-toggler"><span class="wd_close-nav"></span></button>
+<ul class="navbar-nav">
+<li class="nav-item dropdown" data-child="#wd_topnav-34137" id="wd_topnav-34137">
+<a class="nav-link" href="stories" target="_self">Stories</a><span class="dropdown-toggle"></span>
+<div class="wd_category-nav" id="categoryNavDropdown">
+<div class="wd_featureboxes_dropdown wd_featureboxes-horizontal">
+<div class="wd_featurebox_container wd_featurebox-standard" id="wd_featurebox-standard_3543"><div class="wd_featurebox_title"></div><div class="wd_featurebox"><div class="container justify-content-center">
+<div class="row py-2" style="width: 100%;">
+<div class="col-sm-3">
+<h4><a href="stories-product">Products</a></h4>
+<a class="dropdown-item" href="stories-paypal">PayPal</a> <a class="dropdown-item" href="stories?cat=11">Honey</a> <a class="dropdown-item" href="stories?cat=8">Venmo</a> <a class="dropdown-item" href="stories?cat=12">PayPal Zettle</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=13">People</a></h4>
+<a class="dropdown-item" href="stories?cat=17">Culture</a> <a class="dropdown-item" href="stories?cat=18">Diversity, Inclusion, Equity and Belonging</a> <a class="dropdown-item" href="stories?cat=19">Volunteerism</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=14">Performance</a></h4>
+<a class="dropdown-item" href="stories?cat=1">Corporate Announcements</a> <a class="dropdown-item" href="stories?cat=21">PayPal Ventures</a> <a class="dropdown-item" href="stories?cat=22">Strategic Partnerships</a> <a class="dropdown-item" href="stories?cat=6">Social Impact</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=15">Innovation</a></h4>
+<a class="dropdown-item" href="stories?cat=24">Cryptocurrency</a> <a class="dropdown-item" href="stories?cat=25">Digital Wallet</a> <a class="dropdown-item" href="stories?cat=26">Buy Now, Pay Later</a> <a class="dropdown-item" href="stories?cat=27">QR Code</a><a class="dropdown-item" href="stories?cat=28"> Business Lending</a> <a class="dropdown-item" href="stories?cat=29">Credit</a> <a class="dropdown-item" href="stories?cat=30">Technology</a></div>
+</div>
+</div>
+</div></div></div>
+</div>
+</li>
+<li class="nav-item" id="wd_topnav-20295">
+<a class="nav-link" href="news" target="_self">News</a>
+</li>
+<li class="nav-item" id="wd_topnav-20292">
+<a class="nav-link" href="media-resources">Media Resources</a></li>
+<li class="nav-item" id="wd_topnav-20316">
+<a class="nav-link" href="https://about.pypl.com/home/default.aspx">About <i aria-hidden="true" class="fa fa-external-link"></i></a></li>
+<li class="nav-item" id="wd_topnav-20320">
+<a class="nav-link" href="contact">Contact</a></li>
+</ul>
+</div>
+<div class="collapse wd_nav navbar-collapse" id="navbarNavDropdown">
+<ul class="navbar-nav">
+<button class="wd_mobile-nav-toggler"><span class="wd_close-nav"></span></button>
+<li class="nav-item dropdown" data-child="#wd_topnav-34137" id="wd_topnav-34137">
+<a class="nav-link dropdown-toggle" href="stories" target="_self">Stories</a>
+<div class="dropdown-menu wd_category-nav" id="categoryNavDropdown">
+<div class="wd_featureboxes_dropdown wd_featureboxes-horizontal">
+<div class="wd_featurebox_container wd_featurebox-standard" id="wd_featurebox-standard_3543"><div class="wd_featurebox_title"></div><div class="wd_featurebox"><div class="container justify-content-center">
+<div class="row py-2" style="width: 100%;">
+<div class="col-sm-3">
+<h4><a href="stories-product">Products</a></h4>
+<a class="dropdown-item" href="stories-paypal">PayPal</a> <a class="dropdown-item" href="stories?cat=11">Honey</a> <a class="dropdown-item" href="stories?cat=8">Venmo</a> <a class="dropdown-item" href="stories?cat=12">PayPal Zettle</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=13">People</a></h4>
+<a class="dropdown-item" href="stories?cat=17">Culture</a> <a class="dropdown-item" href="stories?cat=18">Diversity, Inclusion, Equity and Belonging</a> <a class="dropdown-item" href="stories?cat=19">Volunteerism</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=14">Performance</a></h4>
+<a class="dropdown-item" href="stories?cat=1">Corporate Announcements</a> <a class="dropdown-item" href="stories?cat=21">PayPal Ventures</a> <a class="dropdown-item" href="stories?cat=22">Strategic Partnerships</a> <a class="dropdown-item" href="stories?cat=6">Social Impact</a></div>
+<div class="col-sm-3">
+<h4><a href="stories?cat=15">Innovation</a></h4>
+<a class="dropdown-item" href="stories?cat=24">Cryptocurrency</a> <a class="dropdown-item" href="stories?cat=25">Digital Wallet</a> <a class="dropdown-item" href="stories?cat=26">Buy Now, Pay Later</a> <a class="dropdown-item" href="stories?cat=27">QR Code</a><a class="dropdown-item" href="stories?cat=28"> Business Lending</a> <a class="dropdown-item" href="stories?cat=29">Credit</a> <a class="dropdown-item" href="stories?cat=30">Technology</a></div>
+</div>
+</div>
+</div></div></div>
+</div>
+</li>
+<li class="nav-item" id="wd_topnav-20295">
+<a class="nav-link" href="news" target="_self">News</a>
+</li>
+<li class="nav-item" id="wd_topnav-20292">
+<a class="nav-link" href="media-resources" target="_self">Media Resources</a>
+</li>
+<li class="nav-item" id="wd_topnav-20316">
+<a class="nav-link" href="https://about.pypl.com/home/default.aspx" target="_blank">About<i aria-hidden="true" class="fa fa-external-link"></i></a>
+</li>
+<li class="nav-item" id="wd_topnav-20294">
+<a class="nav-link" href="contact" target="_self">Contact</a>
+</li>
+</ul>
+</div>
+<div class="collapse wd_global navbar-collapse" id="globalNavDropdown">
+<ul class="navbar-nav">
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Region</a>
+<div class="dropdown-menu">
+<div class="container-fluid justify-content-end">
+<div class="row py-2" style="width: 100%;">
+<div class="col-md-2 ml-auto mr-3">
+<h4>North America</h4>
+<a class="dropdown-item" href="https://newsroom.paypal-corp.com">Global / USA (English)</a>
+<a class="dropdown-item" href="https://newsroom.ca.paypal-corp.com/">Canada (English)</a>
+<h4>Latin America</h4>
+<a class="dropdown-item" href="https://newsroom.br.paypal-corp.com/">Brazil (Portuguese)</a>
+<a class="dropdown-item" href="https://newsroom.latam.paypal-corp.com/">Latin America (Spanish)</a>
+</div>
+<div class="col-md-2 mr-3">
+<h4>Europe</h4>
+<a class="dropdown-item" href="https://newsroom.fr.paypal-corp.com/">France (French)</a>
+<a class="dropdown-item" href="https://newsroom.deatch.paypal-corp.com/">Germany (German)</a>
+<a class="dropdown-item" href="https://newsroom.ie.paypal-corp.com/">Ireland (English)</a>
+<a class="dropdown-item" href="https://newsroom.it.paypal-corp.com/">Italy (Italian)</a>
+<a class="dropdown-item" href="https://newsroom.es.paypal-corp.com/">Spain (Spanish)</a>
+<a class="dropdown-item" href="https://newsroom.uk.paypal-corp.com/">United Kingdom (English)</a>
+</div>
+<div class="col-md-2 mr-5">
+<h4>Asia Pacific</h4>
+<a class="dropdown-item" href="https://newsroom.apac.paypal-corp.com/">Asia Pacific (English)</a>
+<a class="dropdown-item" href="https://newsroom.au.paypal-corp.com/">Australia (English)</a>
+<a class="dropdown-item" href="https://newsroom.china.paypal-corp.com/">China (Simplified Chinese)</a>
+<a class="dropdown-item" href="https://newsroom.in.paypal-corp.com/">India (English)</a>
+<a class="dropdown-item" href="https://newsroom.jp.paypal-corp.com/">Japan (Japanese)</a>
+</div>
+</div>
+</div>
+</div></li>
+</ul>
+</div>
+<!-- Start Desktop Site Search -->
+<div class="wd_search_wrapper">
+<div class="wd_search_form_container"><form action="https://newsroom.paypal-corp.com/search-results" class="wd_search_form wd_search_form_basic" method="get" name="basic_search"><input name="s" type="hidden" value="search_results"><input name="query" placeholder="Search..." size="32" title="Search..." type="text" value=""/> <input name="submit" type="submit" value="Search"/></input></form>
+</div> <!-- END Desktop Site SEARCH -->
+<div class="wd_search-icon"><img alt="Search PayPal Newsroom" src="images/Search_Icon.svg"/></div>
+<div class="wd_close_button"><img alt="Close Search" src="images/icons/icon-search-close.png"/></div>
+</div>
+</nav>
+</header>
+<div class="wd_main-content">
+<div class="wd_hide-me">
+<div class="wd_global_search">
+<div class="wd_search_form_container"><form action="https://newsroom.paypal-corp.com/search-results" class="wd_search_form wd_search_form_basic" method="get" name="basic_search"><input name="s" type="hidden" value="search_results"><input name="query" placeholder="Search" size="32" title="Search" type="text" value=""/> <input name="submit" type="submit" value="Go"/></input></form>
+</div><!-- END SITE SEARCH -->
+</div>
+</div>
+<div class="wd_content-wrapper">
+<div class="container wd_content-container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h1 class="page_header">News</h1>
+<div id="wd_printable_content">
+<div class="wd_newsfeed_releases-detail">
+<div class="wd_tools-wrap wd_top">
+<div class="wd_date">Jun 7, 2022</div>
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-addthis"><a class="addthis_inline_share_toolbox_5yrt"></a></li></ul></div>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript">
+			var addthis_config = {
+				"data_track_clickback": true,
+				"pubid" : "ra-5f440ccd417ac79f",
+				"ui_language" : "en"
+			};
+		</script>
+<script async="async" class="optanon-category-3" nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f440ccd417ac79f" type="text/plain"></script>
+</div>
+<ul class="wd_layout-inline wd_category_link_list"><li class="wd_category_link"><a href="https://newsroom.paypal-corp.com/news-paypal">PayPal</a></li><li class="wd_category_link"><a href="https://newsroom.paypal-corp.com/news-cryptocurrency">Cryptocurrency</a></li><li class="wd_category_link"><a href="https://newsroom.paypal-corp.com/news-digital-wallet">Digital Wallet</a></li></ul>
+<div class="wd_title wd_language_left">PayPal Users Can Now Transfer, Send, and Receive Bitcoin, Ethereum, Bitcoin Cash, and Litecoin</div>
+<div class="wd_body wd_news_body" wd_print_url="https://newsroom.paypal-corp.com/2022-06-07-PayPal-Users-Can-Now-Transfer-Send-and-Receive-Bitcoin-Ethereum-Bitcoin-Cash-and-Litecoin?printable=1" wd_resize="formatNews"><p><strong><em>08/12/2022 Update: </em></strong><em>We are pleased to announce that all eligible PayPal account holders in the U.S. can now transfer, send and receive cryptocurrency with PayPal. Download the PayPal app or log in to your account to learn more.</em></p>
+<p> </p>
+<p><strong>Jose Fernandez da Ponte, Senior Vice President and General Manager, Blockchain, Crypto &amp; Digital Currencies</strong></p>
+<p>We are thrilled to announce that starting today, PayPal supports the native transfer of cryptocurrencies between PayPal and other wallets and exchanges. This feature has been consistently ranked by users as one of the most requested enhancements since we began offering the purchase of crypto on our platform.</p>
+<p>Available now to select U.S. users<sup>1</sup> starting today and rolling out to all eligible U.S. customers in the coming weeks, this new functionality lets PayPal customers:</p>
+<ul>
+<li>Transfer supported coins into PayPal.</li>
+<li>Move crypto from PayPal to external crypto addresses including exchanges and hardware wallets.</li>
+<li>Send crypto to family and friends on PayPal in seconds, with no fees or network charges to send or receive.</li>
+</ul>
+<p>Allowing PayPal customers the flexibility to move their crypto assets (Bitcoin, Ethereum, Bitcoin Cash, or Litecoin) into, outside of, and within our PayPal platform reflects the continuing evolution of our best-in-class platform and enables customers to interact with the broader crypto ecosystem. Customers who transfer their crypto into PayPal can extend the utility of their crypto by spending using our Checkout with Crypto product at millions of merchants.</p>
+<p>PayPal has also been granted a full Bitlicense by the New York Department of Financial Services (NYDFS) – becoming the first company to convert a conditional Bitlicense into a full Bitlicense – signaling our commitment to responsible innovation and expanding the accessibility and utility of digital currencies while fully complying with regulatory guidelines and best practices. Adding the ability to transfer, send, and receive cryptocurrencies is another step in our journey to building a more inclusive and effective financial system.</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-knotch="6ec7f6d9-286e-4603-a2f4-9395505f6a89" frameborder="0" height="315" src="https://www.youtube.com/embed/OT-cCAkFJFo" title="YouTube video player" width="560"></iframe></p>
+<p>We’re excited to connect PayPal’s customers to other wallets, exchanges, and applications, and we will continue to roll out additional crypto features, products, and services in the months ahead. We look forward to hearing more customer and community feedback as we enhance our digital currency capabilities.</p>
+<p>Below is a step-by-step by step guide on using our crypto transfer feature. To help ensure that transfers aren’t made without authorization, PayPal has also implemented an additional identity verification process, which is also described below.</p>
+<h2> </h2>
+<h2>Transferring crypto into PayPal from an external wallet or exchange</h2>
+<ol>
+<li>Once logged into PayPal, enter the crypto section of your application and choose the coin you want to transfer.</li>
+<li>Click or tap the transfers button, which looks like: <img alt="" src="image/paypal-arrows-icon-25px.jpg" style="max-height: 50%;float: none;max-width: 50% !important;margin: auto;">, then select “Receive.”</img></li>
+<li>Complete any additional ID verification steps. This process is generally only required once per user.</li>
+<li>Share the unique address with the sender or input it into the third-party crypto app you are sending from. We recommend you use the QR code or cut and paste the address directly to avoid mistakes. If you are entering the address manually, please double-check that it is correct. Neither PayPal nor your sender will be able to recover coins sent to a mistyped address.</li>
+</ol>
+<p>The wallet address is created <strong>only for the coin you selected</strong>, not your PayPal account. To help protect your privacy, we generate a new “Receive” address each time you want to send crypto to your account. PayPal does not charge fees to transfer crypto into PayPal, but network and sender fees may apply. Processing times vary.</p>
+<p style="max-height: none; float: none; margin: auto; max-width: 100% !important; text-align: center;"><img alt="Transferring crypto into PayPal" src="https://newsroom.paypal-corp.com/image/transfer+in.jpg" style="max-height: none;float: none;max-width: 100% !important;margin: auto;"/></p>
+<h2> </h2>
+<h2>Moving crypto to an external wallet or exchange</h2>
+<ol>
+<li>Once logged into PayPal, enter the crypto section of your application and choose the coin you want to transfer. </li>
+<li>Click or tap the transfers button and select “Send” to transfer crypto to another unique crypto address.</li>
+<li>Complete any additional ID verification steps. This process is generally only required once per user.</li>
+<li>You’ll need to enter an external crypto address if you want to transfer cryptocurrency out of your account. Copy and paste an address, manually enter it, or scan a QR code by tapping the QR code button to the right of the search box. 
+	<ul>
+<li>Please remember: Crypto transfers are final and cannot be reversed. Check the destination address carefully and ensure that the destination address is of the same type (Bitcoin, Ethereum, Bitcoin Cash, or Litecoin) as the coins you are sending. Pay particular attention when sending crypto to unfamiliar addresses.</li>
+<li><strong>Fees</strong>: Sending cryptocurrency outside of PayPal will have a Network Fee, also known as the Blockchain Network Fee. This is not a PayPal Fee. This fee is generated depending on network congestion and other factors and may fluctuate. PayPal will provide an estimate of your network fees on the confirmation screen. Sending or receiving cryptocurrency to other users on PayPal will not incur a network fee. </li>
+</ul>
+</li>
+<li>Confirm the external transfer.</li>
+</ol>
+<h2> </h2>
+<h2>Sending and receiving crypto with other PayPal users</h2>
+<ol>
+<li>Once logged into PayPal, enter the crypto section of your application and choose the coin you want to send. Click or tap the transfers button and select “Send”.</li>
+<li>Select the PayPal contact to which you’d like to send to crypto and confirm your fee-free transfer.</li>
+</ol>
+<p style="max-height: none; float: none; margin: auto; max-width: 100% !important; text-align: center;"><img alt="Sending and receiving crypto with other PayPal users" src="https://newsroom.paypal-corp.com/image/send+receive.jpg" style="max-height: none;float: none;max-width: 100% !important;margin: auto;"/></p>
+<p> </p>
+<p><sub><strong>1</strong> PayPal’s crypto services are not available in Hawaii.</sub></p>
+<div class="wd_related-content">
+<h4>Related Articles</h4>
+<div class="wd_related-wrap">
+<p><a href="https://newsroom.paypal-corp.com/news-cryptocurrency">Cryptocurrency</a></p>
+<img src="https://newsroom.paypal-corp.com/image/Blockchain_Thumbnail.jpg"/>
+<p><a href="https://newsroom.paypal-corp.com/2022-02-03-PayPal-welcomes-leading-experts-in-distributed-technology-economics-and-regulation-to-Blockchain-Crypto-and-Digital-Currencies-advisory-council">PayPal Welcomes Leading Experts in Distributed Technology, Economics and Regulation to Blockchain, Crypto and Digital Currencies Advisory Council</a></p>
+<p>February 8, 2022</p>
+</div>
+<div class="wd_related-wrap">
+<p><a href="https://newsroom.paypal-corp.com/news-cryptocurrency">Cryptocurrency</a></p>
+<img src="https://newsroom.paypal-corp.com/image/PayPal_Crypto_06_LQ.jpg"/>
+<p><a href="https://newsroom.paypal-corp.com/2021-08-23-PayPal-Launches-the-Ability-to-Buy,-Hold-and-Sell-Cryptocurrency-in-the-UK">PayPal Launches the Ability to Buy, Hold and Sell Cryptocurrency in the UK</a></p>
+<p>August 23, 2021</p>
+</div>
+</div>
+</div>
+<div class="knotch_placeholder"> </div>
+<div class="wd_tools-wrap wd_bottom">
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-addthis"><a class="addthis_inline_share_toolbox_5yrt"></a></li></ul></div>
+<script nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" type="text/javascript">
+			var addthis_config = {
+				"data_track_clickback": true,
+				"pubid" : "ra-5f440ccd417ac79f",
+				"ui_language" : "en"
+			};
+		</script>
+<script async="async" class="optanon-category-3" nonce="NjQxNDE5ZGNkMGZmM2U0YTc2MDdiMTRmNTQ5YTE4N2Q0MzRhNzdjYg==" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f440ccd417ac79f" type="text/plain"></script>
+</div>
+<div class="wd_moved-related-wrapper"> </div>
+<!-- ITEMDATE: 2022-06-07 10:00:00 EDT -->
+</div>
+</div><div class="wd_featureboxes_filler wd_featureboxes-vertical">
+<div class="wd_featurebox_container wd_featurebox-standard" id="wd_featurebox-standard_3544"><div class="wd_featurebox_title">(Newsroom Ad tile) The Modern Enterprise</div><div class="wd_featurebox"><table align="left" border="0" cellpadding="0" cellspacing="0" class="wd_imagetable" role="presentation" style="margin: 0px 0px 0px 0px;" width="400"><tr><td><a href="https://newsroom.paypal-corp.com/The-Modern-Enterprise" target="_self"><img alt="The Modern Enterprise series explores the issues and opportunities shaping successful companies." border="0" src="/image/newsroom-card-enterprise-01.png" title="The Modern Enterprise series explores the issues and opportunities shaping successful companies."/></a></td></tr></table>
+</div></div><div class="wd_featurebox_container wd_featurebox-standard" id="wd_featurebox-standard_3545"><div class="wd_featurebox_title">(Newsroom Ad tile) Changemakers of Tomorrow</div><div class="wd_featurebox"><table align="left" border="0" cellpadding="0" cellspacing="0" class="wd_imagetable" role="presentation" style="margin: 0px 0px 0px 0px;" width="400"><tr><td><a href="https://newsroom.paypal-corp.com/2022-Changemakers-of-Tomorrow" target="_self"><img alt="The Changemakers of Tomorrow series pays tribute to everyday heroes in Singapore who impact society and bring purpose into the lives of their community." border="0" src="/image/newsroom-card-changemaker-01.png" title="The Changemakers of Tomorrow series pays tribute to everyday heroes in Singapore who impact society and bring purpose into the lives of their community."/></a></td></tr></table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div> <!-- End Main Content -->
+<div class="container-fluid wd_yellow-background mt-3">
+<div class="row">
+<div class="container">
+<div class="row">
+<div class="col text-center mx-auto">
+<div class="wd_featureboxes_subscribe wd_featureboxes-vertical">
+<div class="wd_featurebox_container wd_featurebox-standard" id="wd_featurebox-standard_3542"><div class="wd_featurebox_title">Stay up to date.</div><div class="wd_featurebox"><p>Sign up to receive the latest news to your email.</p>
+<p class="wd_white-button"><a href="alerts">Subscribe</a></p>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid wd_footer-wrap">
+<footer class="" role="contentinfo">
+<div class="wd_footer-top">
+<div class="row">
+<div class="col-md-3 col-sm-12">
+<div class="wd_footer-logo">
+<img alt="Paypal Logo" src="images/PP LOGO.png"/>
+<p><a href="https://www.paypal.com/us/home" target="_blank">PayPal.com</a><br/>
+<a href="https://www.venmo.com" target="_blank">Venmo.com</a><br/>
+<a href="https://www.joinhoney.com/paypal" target="_blank">JoinHoney.com</a></p>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 wd_link-list">
+<h4>Our Global Newsrooms</h4>
+<ul>
+<li><a href="https://newsroom.paypal-corp.com/">Global/USA</a></li>
+<li><a href="https://newsroom.apac.paypal-corp.com/">Asia Pacific</a></li>
+<li><a href="https://newsroom.au.paypal-corp.com/">Australia</a></li>
+<li><a href="https://newsroom.br.paypal-corp.com/">Brazil</a></li>
+<li><a href="https://newsroom.ca.paypal-corp.com/">Canada</a></li>
+<li><a href="https://newsroom.china.paypal-corp.com/">China</a></li>
+</ul>
+<ul>
+<li><a href="https://newsroom.fr.paypal-corp.com/">France</a></li>
+<li><a href="https://newsroom.deatch.paypal-corp.com/">Germany</a></li>
+<li><a href="https://newsroom.in.paypal-corp.com/">India</a></li>
+<li><a href="https://newsroom.ie.paypal-corp.com/">Ireland</a></li>
+<li><a href="https://newsroom.it.paypal-corp.com/">Italy</a></li>
+</ul>
+<ul>
+<li><a href="https://newsroom.jp.paypal-corp.com/">Japan</a></li>
+<li><a href="https://newsroom.latam.paypal-corp.com/">Latin America</a></li>
+<li><a href="https://newsroom.es.paypal-corp.com/">Spain</a></li>
+<li><a href="https://newsroom.uk.paypal-corp.com/">UK</a></li>
+</ul>
+</div>
+<div class="col-md-3 col-sm-12 wd_social">
+<h4>Stay Connected</h4>
+<ul class="wd_social-footer">
+<li><a href="https://www.facebook.com/PayPalUSA/" target="_blank"><img src="images/icons/icon_facebook.png"/></a></li>
+<li><a href="https://www.youtube.com/c/paypal" target="_blank"><img src="images/icons/YouTubeCircleIcon.png"/></a></li>
+<li><a href="https://twitter.com/PayPalNews" target="_blank"><img src="images/icons/TwitterCircleIcon.png"/></a></li>
+<li><a href="https://www.instagram.com/paypal/" target="_blank"><img src="images/icons/InstagramCircleIcon.png"/></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="wd_footer-bottom">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 col-sm-12 px-0">
+<p>Â© PayPal 2022 All rights reserved.</p>
+</div>
+<div class="col-md-9 col-sm-12 px-0">
+<a href="https://www.paypal.com/privacy-center" target="_blank">Privacy</a>
+<a href="https://newsroom.paypal-corp.com/contact" target="_self">Contact Us</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MediaRoom Scripts -->
+<script src="slick/slick.min.js"></script>
+<script src="js/wdheaderandfooter.js"></script>
+<script src="js/wdcontent.js"></script>
+<script>
+	function containsImage() {
+		$('.wd_item, .item').each(function(){
+		var hasImage = $(this).find('.wd_thumbnail img').attr('src');
+			if(hasImage === undefined) {
+				$(this).addClass('wd_no-image');
+			} else {
+				$(this).addClass('wd_has-image');
+			}
+		});
+	}
+
+	function noImage() {
+		//Add Default Image to items with none
+		$('.wd_no-image').each(function(){
+			if($(this).find('.wd_thumbnail').length){}else{
+				var link = $(this).find('.wd_item_wrapper .wd_title a').attr('href');
+				var text = $(this).find('.wd_item_wrapper .wd_title a').text();
+				var image = new Array ();
+				image[0] = "images/fillers/Monogram on gold.png";
+				image[1] = "images/fillers/White monogram on blue.png";
+				image[2] = "images/fillers/White Wordmark on blue.png";
+				image[3] = "images/fillers/Wordmark on gold.png";
+				var size = image.length;
+				var x = Math.floor(size*Math.random());
+				
+				$(this).prepend('<div class="wd_thumbnail"><a href="'+link+'"><img alt="'+text+'" src="'+image[x]+'" border="0"></a></div>');
+			};
+		});
+	}
+
+	function toolbar() {
+	//Adds AddThis Toolbar after standard content section
+		$('<div class="addthis_inline_share_toolbox"></div>').insertAfter('.wd_standard-detail');	
+	//Adds AddThis Toolbar to container defined in microtemplate
+		$('<div class="addthis_inline_share_toolbox"></div>').appendTo('.wd_tools-wrap');
+	//Prepends "Share Article" text to the AddThis Toolbar 
+		$('.addthis_inline_share_toolbox').prepend('<p class="addthis_text">Share</p>');
+	}
+
+	function relatedContent() {
+	//Wraps Related Content Image and p tags
+		$('.wd_related-wrap').each(function(){
+			$(this).find('img').insertBefore($(this).find('p:first-child'));
+		$(this).find('p').wrapAll('<div class="wd_inner"></div>');
+		});
+		//Moves Related Content to container defined in microtemplate
+		$('.wd_related-content').prependTo('.wd_moved-related-wrapper');
+
+	// Replace images with background image elements
+		$('.wd_related-content.wd_rounded-square .wd_related-wrap-new').each(function() {
+			var imgSrc = $(this).find('.wd_related-img-bg img').attr('src');
+			$(this).find('.wd_responsive-img').append('<div class="wd_related-background-img" style="background-image: url('+imgSrc+');"></div>');
+			$(this).find('.wd_related-img-bg img').remove();
+	});
+
+	// Add Read More link to Related Articles
+		$('.wd_related-content.wd_rounded-square .wd_related-wrap-new').each(function() {
+			var link = $(this).find('.wd_related-headline-more a').attr('href');
+			var text = $(this).find('.wd_title a').text();
+			$('<div class="wd_read-more"><a href="'+link+'" aria-label="Read more about '+text+'">Read more</a></div>').insertAfter($(this).find('.wd_related-headline-more'));
+		});
+
+	// Wrap wd_related-headline-more and wd_read-more in one elements
+		$('.wd_related-content.wd_rounded-square .wd_related-wrap-new').each(function() {
+			$(this).find('.wd_related-headline-more, .wd_read-more').wrapAll('<div class="wd_related-headline-content"><div class="related_content-inner"></div></div>');
+		});
+	}
+
+	function globalSearch() {
+		$('.wd_global_search').prependTo('.wd_page-actions-wrap');
+	}
+
+	function movesAssets() {
+		//Moves Assets to container defined in microtemplate
+		$('div[wd_move_after]').prependTo('.wd_moved-assets-wrapper');
+		$('div[wd_move_after]').before('<h4>Related Content</h4>');
+	}
+
+	</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+
+		
+		//Crisis Pages - Add AddThis
+		
+		//Stories, News Releases, Articles - List Pages
+				containsImage();
+		noImage();
+		
+		//Stories, News Releases, Articles Detail pages
+				relatedContent();
+		toolbar();
+		movesAssets();
+		
+		//Stories List Page
+		
+		//New Release List Page - Remove Trailing Thumbnail
+				globalSearch();
+
+		$('#navbarNavDropdown #wd_topnav-20295').addClass('active');
+
+		$('.wd_newsfeed_releases .wd_thumbnail img').each(function(){
+			this.src = this.src.replace('thumbnail=144', '');
+			this.src = this.src.replace('?p=thumbnail', '');
+		});
+		
+		//News Releases Detail - Move Block Quote
+				//Moves Block Quote
+		//$('blockquote').insertAfter('.wd_responsive-img:first-of-type');
+		
+		//Article Detail - Test for Image
+		
+	
+		//Multimedia - 20292
+		
+		//About Page - 20285
+		
+		//Contact PayPal - 20294
+		
+		//Search Results Page 
+		
+		
+		$('.wd_stories-teaser .item, wd_newsfeed_releases-teaser .item').each(function(){
+			containsImage();
+			noImage();
+		});
+
+		}); //END Document Ready
+	</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f440ccd417ac79f" type="text/javascript"></script>
+<!-- Twitter universal website tag code -->
+<script>
+	!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+	},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+	a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+	// Insert Twitter Pixel ID and Standard Event data below
+	twq('init','o7elj');
+	twq('track','PageView');
+	</script>
+<!-- END Twitter universal website tag code -->
+<!-- LinkedIn tag code -->
+<script type="text/javascript">
+	_linkedin_partner_id = "1001051";
+	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+	</script><script type="text/javascript">
+	(function(l) {
+	if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+	window.lintrk.q=[]}
+	var s = document.getElementsByTagName("script")[0];
+	var b = document.createElement("script");
+	b.type = "text/javascript";b.async = true;
+	b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+	s.parentNode.insertBefore(b, s);})(window.lintrk);
+	</script>
+<noscript>
+<img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=1001051&amp;fmt=gif" style="display:none;" width="1">
+</img></noscript>
+<!-- END LinkedIn tag code -->
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- Piwik Tracking Code -->
+<script class="optanon-category-2" type="text/plain">
+  var _paq = _paq || [];
+
+  _paq.push(["setCustomVariable", 1, "Content Type", "News Releases Feed", "page"]);
+
+  _paq.push(["setCustomVariable", 3, "Navigation Page", "News", "page"]);
+
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//stats.drivetheweb.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", 5792]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+<img alt="" src="https://stats.drivetheweb.com/piwik.php?idsite=5792&amp;rec=1" style="border:0">
+</img></noscript>
+<!-- End Piwik Tracking Code -->
+<!-- end spin_special_output(body_end) -->
+<script>(function(){window['__CF$cv$params']={r:'7424221e0b27a837',m:'szt_P8iyFgUr22_WvKIno.xdhveEpX1clMRSAFMZg.Y-1661764014-0-AQKHtl0P0AntDal4UerrAHFVtlCYYcIV0hJ65pgu8FBniKknRy4qWSxqQjNYOSgJjvp4BqQr2eMWJyIaTyiLs0SpSu332cBjEiNQ0wa/zCTv6rdCC4zKFV6MU7ZLmIpFIhhtJuRg8iwLmD91CjyThd/xQOdDV9z66uBvxsNwnId1KB3jWJqNIol+FQfiG4C32J1HfC48hsAfNOQwcXW+hp2Oi4NI3ulMK8NN5xeXWEoxjjAC2IRFjUdLvwet6Ox3Ww==',s:[0xbb7d6039f9,0x73c26fcb30],}})();</script></body>
+</html>
